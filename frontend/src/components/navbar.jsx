@@ -1,12 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import Logo from "./../assets/images/IUHS-Logo.png";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
+        <a className="navbar-brand" href="#"> 
+          <img src={Logo} alt="" width="50px"/>
         </a>
         <button
           className="navbar-toggler"

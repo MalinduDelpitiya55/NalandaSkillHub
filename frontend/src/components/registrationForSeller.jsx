@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-function OrderForm() {
+function SellerRegistrarion() {
   return (
     <form className="m-4">
       {/* 2 column grid layout with text inputs for the first and last names */}
@@ -95,4 +95,4 @@ function OrderForm() {
   );
 }
 
-export default OrderForm;
+export default SellerRegistrarion;
