@@ -119,13 +119,13 @@ const Footer = () => {
               </p>
               <p>
                 <i className="fas fa-envelope me-3"></i>
-                info@example.com
+                info@example.cbnnom
               </p>
               <p>
                 <i className="fas fa-phone me-3"></i> + 01 255454445425
               </p>
               <p>
-                <i className="fas fa-print me-3"></i> + 01 234 567 89
+                <i className="fas fa-print me-3"></i> + 0142522221
               </p>
             </div>
             {/* Grid column */}
