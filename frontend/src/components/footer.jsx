@@ -122,7 +122,7 @@ const Footer = () => {
                 info@example.cbnnom
               </p>
               <p>
-                <i className="fas fa-phone me-3"></i> + 01 255454445425
+                <i className="fas fa-phone me-3"></i> + 01 2554
               </p>
               <p>
                 <i className="fas fa-print me-3"></i> + 0142522221
