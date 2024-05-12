@@ -80,7 +80,7 @@ function SignInForm() {
                     </div>
                     <div className="mb-3">
                       <label htmlFor="password" className="form-label">
-                        Password
+                        Passwords
                       </label>
                       <div
                         data-mdb-input-init
