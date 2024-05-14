@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-const sellerSchema = new Schema({
+const buyerSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -18,10 +18,10 @@ const sellerSchema = new Schema({
     },
     role: {
         type: String,
-        default: "seller" // Assuming default role is "seller"
+        default: "buyer" // Assuming default role is "buyer"
     }
 });
 
-const Seller = mongoose.model('Seller', sellerSchema);
+const Buyer = mongoose.model('Buyer', buyerSchema);
 
-export default Seller;
+export default Buyer;

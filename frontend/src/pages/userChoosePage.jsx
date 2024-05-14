@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
 
-import Login from "./../components/login";
+import User from "./../components/sellerOrBuyer";
 
 
 export default function login() {
   return (
     <div>
-      <Login />
+      <User />
     </div>
   );
 }

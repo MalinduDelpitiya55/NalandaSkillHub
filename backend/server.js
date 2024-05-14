@@ -2,8 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-import User from './models/sellers.js'; // Adjust the path as needed
-import Seller from './models/User.js'; // Adjust the path as needed
+import Seller from './models/sellers.js'; // Adjust the path as needed
+import Buyer from './models/buyer.js'; // Adjust the path as needed
 import cors from 'cors';
 import dotenv from 'dotenv';
 
@@ -28,7 +28,7 @@ mongoose.connect(MONGODB_URI, {
     .catch(err => console.log(err));
 
 // Registration endpoint
-app.post('/create', async (req, res) => {
+app.post('/buyerRegistration', async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
@@ -38,17 +38,18 @@ app.post('/create', async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const newUser = new User({
+        const newBuyer = new Buyer({
             name,
             email,
             password: hashedPassword,
+            role: "buyer"
         });
 
-        await newUser.save();
+        await newBuyer.save();
 
-        res.status(201).json({ message: 'User created successfully' });
+        res.status(201).json({ message: 'Buyer account created successfully' });
     } catch (error) {
-        console.error('Error during registration ', error);
+        console.error('Error during buyer registration:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
@@ -62,17 +63,18 @@ app.post('/sellerRegistration', async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const newSeller = new User({
+        const newSeller = new Seller({
             name,
             email,
             password: hashedPassword,
+            role: "seller"
         });
 
         await newSeller.save();
 
-        res.status(201).json({ message: 'User created successfully' });
+        res.status(201).json({ message: 'Seller account created successfully' });
     } catch (error) {
-        console.error('Error during registration ', error);
+        console.error('Error during seller registration:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
@@ -80,43 +82,30 @@ app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        if (!email) {
-            return res.status(400).json({ error: 'Email is required' });
-        }
-        if (!password) {
-            return res.status(400).json({ error: 'Password is required' });
+        if (!email || !password) {
+            return res.status(400).json({ error: 'Email and password are required' });
         }
 
-        // Find the user by email
-        const user = await User.findOne({ email });
+        // Find the user or seller by email
+        const user = await Buyer.findOne({ email });
         const seller = await Seller.findOne({ email });
 
         if (!user && !seller) {
             return res.status(404).json({ error: 'User not found' });
         }
-        else if (user) {
-            const passwordMatch = await bcrypt.compare(password, user.password);
 
-            if (!passwordMatch) {
-                return res.status(401).json({ error: 'Incorrect password' });
-            }
+        const userType = user ? 'user' : 'seller';
+        const foundUser = user || seller;
 
-            res.status(200).json({ message: 'Login successful' });
-        }
-        else if (seller) {
-            const passwordMatch = await bcrypt.compare(password, seller.password);
+        const passwordMatch = await bcrypt.compare(password, foundUser.password);
 
-            if (!passwordMatch) {
-                return res.status(401).json({ error: 'Incorrect password' });
-            }
-
-            res.status(200).json({ message: 'Login successful' });
+        if (!passwordMatch) {
+            return res.status(401).json({ error: 'Incorrect password' });
         }
 
-        
-        
+        res.status(200).json({ message: `${userType} login successful` });
     } catch (error) {
-        console.error('Error during sign-in ', error);
+        console.error('Error during sign-in:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
