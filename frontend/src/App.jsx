@@ -19,6 +19,7 @@ export default function App() {
       <Routes>
         
         <Route path="/user" element={<User />} />
+        <Route path="/" element={<Home />} />
         <Route path="/buyerRegistration" element={<BuyersRegistration />} />
         <Route path="/sellerRegistration" element={<SellerRegistration />} />
         <Route path="/sellerRegistration12" element={<SellerRegistration12 />} />
