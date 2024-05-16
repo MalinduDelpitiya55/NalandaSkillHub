@@ -16,7 +16,7 @@ import { useState} from "react";
         window.location.href = "/buyerRegistration";
       } else if (selectedOption === "freelancer") {
         // Redirect to page 2
-        window.location.href = "/sellerRegistration";
+        window.location.href = "/sellerRegistration12";
       }
     };
 

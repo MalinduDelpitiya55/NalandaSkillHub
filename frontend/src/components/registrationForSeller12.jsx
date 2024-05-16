@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import Tagify from "./test";
+import Tagify from "./tagInput";
 import "./css/signin-seller.css";
 import DefaultPP from "./../assets/images/profile-circle.svg";
 function MultiStepForm() {
