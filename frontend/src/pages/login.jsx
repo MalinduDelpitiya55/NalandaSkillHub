@@ -9,7 +9,7 @@ export default function login() {
     <div>
       <Navbar />
       <Login />
-      <Footer />ggggggggggggggggggggggg
+      <Footer />
     </div>
   );
 }

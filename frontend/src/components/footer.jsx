@@ -1,153 +1,153 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import React from 'react';
+import Logo from "./../assets/images/home/logo.png";
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="text-center text-lg-start bg-body-tertiary text-muted">
-      {/* Section: Social media */}
-      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        {/* Left */}
-        <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+<>
+     {/* CSS */}
+     <style>
+        {`
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            
+            body {
+              --primary--color: #0b014c;
+              --primary--color-p: #0b014c;
+              margin: 0;
+              padding: 0;
+              font-size: 16px;
+              font-family: "Roboto", sans-serif !important;
+            }
+            
+            /* Navbar */
+            
+            .hedertitle li{
+              padding-right: 40px;
+            }
+            
+            ul {
+              list-style: none;
+              padding: 0 !important;
+            }
+            
+            a:link {
+              text-decoration: none;
+            }
+            
+            #top-nav {
+              z-index: 0;
+            }
+            
+            nav ul > li {
+              cursor: pointer;
+              
+            }
+            
+            nav {
+              z-index: 10 !important;
+              background-color: #0b014c;
+            }
+            
+            
+            
+            /* Footer */
+            footer{
+              background-color: #0b014c;
+            }
+            .footer a {
+              color: rgb(255, 255, 255) !important;
+            }
+            
+            
+            .footer .footer-links li {
+              margin: 14px 0;
+            }
+            
+            .footer .footer-links li a:hover {
+              text-decoration: underline;
+              color: yellow;
+              
+            }
+            
+            .footer-social li:hover {
+              background-color: rgb(255, 255, 255);
+              border-radius: 10px;
+            }
+
+            .text-center{
+              color: white;
+            }
+        `}
+      </style>
+
+
+    <footer className="footer pt-5 pb-3 px-3 px-sm-4 px-md-5 border-top border-1 border-opacity-10 text-muted">
+      <div className="footer-links d-flex flex-wrap justify-content-lg-between" style={{ columnGap: '15px' }}>
+        <div className="mb-4 links-categories" style={{ minWidth: '160px' }}>
+          <p className="text-white fw-semibold fs-6">Categories</p>
+          <ul>
+            <li><a href="#">Graphics & Design</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Writing & Translation</a></li>
+            <li><a href="#">Video & Animation</a></li>
+            <li><a href="#">Music & Audio</a></li>
+            <li><a href="#">Programming & Tech</a></li>
+          </ul>
         </div>
-        {/* Left */}
-
-        {/* Right */}
-        <div>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-google"></i>
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <i className="fab fa-github"></i>
-          </a>
+        <div className="mb-4 links-about" style={{ minWidth: '160px' }}>
+          <p className="text-white fw-semibold fs-6">About</p>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press & News</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
         </div>
-        {/* Right */}
-      </section>
-      {/* Section: Social media */}
-
-      {/* Section: Links  */}
-      <section className="">
-        <div className="container text-center text-md-start mt-5">
-          {/* Grid row */}
-          <div className="row mt-3">
-            {/* Grid column */}
-            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              {/* Content */}
-              <h6 className="text-uppercase fw-bold mb-4">
-                <i className="fas fa-gem me-3"></i>Company name
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Angular
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  React
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Laravel
-                </a>
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Help
-                </a>
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <i className="fas fa-home me-3"></i> New York, NY 10012, US
-              </p>
-              <p>
-                <i className="fas fa-envelope me-3"></i>
-                info@example.com
-              </p>
-              <p>
-                <i className="fas fa-phone me-3"></i> + 01 234 567 88
-              </p>
-              <p>
-                <i className="fas fa-print me-3"></i> + 01 234 567 89
-              </p>
-            </div>
-            {/* Grid column */}
-          </div>
-          {/* Grid row */}
+        <div className="mb-4 links-support" style={{ minWidth: '160px' }}>
+          <p className="text-white fw-semibold fs-6">Support</p>
+          <ul>
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Trust & Safety</a></li>
+            <li><a href="#">Selling on ProConnect</a></li>
+            <li><a href="#">Buying on ProConnect</a></li>
+          </ul>
         </div>
-      </section>
-      {/* Section: Links  */}
-
-      {/* Copyright */}
-      <div
-        className="text-center p-4"
-        style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}
-      >
-        © {new Date().getFullYear()} Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+        <div className="mb-4 links-community" style={{ minWidth: '160px' }}>
+          <ul>
+            <li><a href="#"><img src={Logo} width="260" height="54" alt="proconnect" /></a></li>
+            <li><a href="#">+0125454548</a></li>
+          </ul>
+        </div>
       </div>
-      {/* Copyright */}
+      <div className="footer-rights-wrapper py-3 my-auto border-top border-1 border-opacity-10 d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
+        <div className="footer-rights d-flex flex-column flex-md-row justify-content-center align-items-center" style={{ gap: '18px' }}>
+          <img src={Logo} width="130" height="27" alt="proconnect" />
+          <div className="text-center align-middle my-auto">© ProConnect IUHS Nalanda Campus. 2024</div>
+        </div>
+        <div className="footer-social d-flex flex-column flex-md-row justify-content-center align-items-center" style={{ columnGap: '15px' }}>
+          <ul className="d-flex align-items-center my-auto">
+            <li className="p-2">
+              <a href="#">
+                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="grey">
+                  
+                </svg>
+                English
+              </a>
+            </li>
+            <li className="p-2">
+              <a href="#">
+                $ USD
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
+
+    </>
   );
-};
+}
 
 export default Footer;
