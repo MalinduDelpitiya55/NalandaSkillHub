@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import BuyersRegistration from "./pages/buyerSignup";
 import SellerRegistration from "./pages/selllerSignup";
 import Login from "./pages/login";
+import Ratings from "./pages/ratingSubmit";
 import Home from "./pages/home";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/create" element={<BuyersRegistration />} />
         <Route path="/sellerRegistration" element={<SellerRegistration />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/rating" element={<Ratings />} />
       </Routes>
     </Router>
   );
