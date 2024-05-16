@@ -5,6 +5,7 @@ import BuyersRegistration from "./pages/buyerSignup";
 import SellerRegistration from "./pages/selllerSignup";
 import Login from "./pages/login";
 import Home from "./pages/home";
+import Profile from "./pages/profile";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/create" element={<BuyersRegistration />} />
         <Route path="/sellerRegistration" element={<SellerRegistration />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
