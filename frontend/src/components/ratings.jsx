@@ -55,6 +55,7 @@ const App = () => {
         </h4>
         <form action="#">
           <div
+            className="rating"
             style={{
               display: 'flex',
               justifyContent: 'center',
@@ -64,7 +65,7 @@ const App = () => {
               color: '#FFBD13',
               marginBottom: '2rem',
             }}
-            className="rating"
+            
           >
             <input type="number" name="rating" hidden />
             {[...Array(5)].map((_, idx) => (
