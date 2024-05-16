@@ -12,7 +12,7 @@ export default function BuyersRegistration() {
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
   const errorRef = useRef("");
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
 

@@ -3,23 +3,21 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const sellerSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    role: {
-        type: String,
-        default: "seller" // Assuming default role is "seller"
-    }
+    fname: String,
+    mname: String,
+    lname: String,
+    uname: String,
+    email: String,
+    phoneNumber: String,
+    dob: Date,
+    gender: String,
+    password: String,
+    confirmPassword: String,
+    country: String,
+    timezone: String,
+    description: String,
+    skills: [String],
+    profilePicture: String
 });
 
 const Seller = mongoose.model('Seller', sellerSchema);

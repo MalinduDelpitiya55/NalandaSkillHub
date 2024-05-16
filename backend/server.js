@@ -6,6 +6,7 @@ import Seller from './models/sellers.js'; // Adjust the path as needed
 import Buyer from './models/buyer.js'; // Adjust the path as needed
 import cors from 'cors';
 import dotenv from 'dotenv';
+import multer from "multer";
 
 dotenv.config();
 
@@ -17,7 +18,8 @@ app.use(cors());
 
 // Body parser middleware
 app.use(bodyParser.json());
-
+app.use(bodyParser.json());
+const upload = multer({ dest: "uploads/" });
 // MongoDB connection
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -78,6 +80,45 @@ app.post('/sellerRegistration', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+
+app.post("/sellerRegistration12", upload.single("profilePicture"), async (req, res) => {
+    const formData = req.body;
+    const profilePicture = req.file;
+    
+
+    // Create a new form instance
+    const newSeller = new Seller({
+        fname: formData.fname,
+        mname: formData.mname,
+        lname: formData.lname,
+        uname: formData.uname,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        dob: formData.dob,
+        gender: formData.gender,
+        password: formData.password,
+        confirmPassword: formData.confirmPassword,
+        country: formData.country,
+        timezone: formData.timezone,
+        description: formData.description,
+        skills: formData.skills,
+        profilePicture: profilePicture ? profilePicture.path : null, // Assuming you store the file path
+    });
+
+    try {
+        // Save the form data to MongoDB
+        await newSeller.save();
+        res.json({ message: "Form submitted successfully" });
+    } catch (error) {
+        console.error("Error submitting form:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+
+
+
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
