@@ -3,7 +3,8 @@ import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import SigninIMG from "./../assets/images/sellerSignup.jpg";
 export default function BuyersRegistration() {
   const nameRef = useRef("");
   const emailRef = useRef("");
@@ -68,99 +69,112 @@ const navigate = useNavigate();
   };
 
   return (
-    <div className="container">
-      <h2 className="text-center mb-4">Sign Up</h2>
-      <div className="row justify-content-center">
-        <div className="col-md-8">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">
-                Name
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                ref={nameRef}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                ref={emailRef}
-                required
-              />
-            </div>
-            <div className="mb-3 position-relative">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
-              <div className="input-group">
-                <input
-                  type={showPassword1 ? "text" : "password"}
-                  className="form-control"
-                  id="password"
-                  ref={passwordRef}
-                  required
-                />
-                <span
-                  className="input-group-text eye-icon"
-                  onClick={togglePasswordVisibility1}
-                >
-                  <FontAwesomeIcon icon={showPassword1 ? faEyeSlash : faEye} />
-                </span>
+    <div className="container align-items-center ">
+      <div className="row   col-12">
+        <div className="col-6 m-2">
+          <img src={SigninIMG} alt="Image note found" width="70%" />
+        </div>
+
+        <div className="col-5 mt-5 ">
+          <h2 className="text-center mb-4">Sign Up</h2>
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    ref={nameRef}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    ref={emailRef}
+                    required
+                  />
+                </div>
+                <div className="mb-3 position-relative">
+                  <label htmlFor="password" className="form-label">
+                    Password
+                  </label>
+                  <div className="input-group">
+                    <input
+                      type={showPassword1 ? "text" : "password"}
+                      className="form-control"
+                      id="password"
+                      ref={passwordRef}
+                      required
+                    />
+                    <span
+                      className="input-group-text eye-icon"
+                      onClick={togglePasswordVisibility1}
+                    >
+                      <FontAwesomeIcon
+                        icon={showPassword1 ? faEyeSlash : faEye}
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div className="mb-3 position-relative">
+                  <label htmlFor="confirmPassword" className="form-label">
+                    Confirm Password
+                  </label>
+                  <div className="input-group">
+                    <input
+                      type={showPassword2 ? "text" : "password"}
+                      className="form-control"
+                      id="confirmPassword"
+                      ref={confirmPasswordRef}
+                      required
+                    />
+                    <span
+                      className="input-group-text eye-icon"
+                      onClick={togglePasswordVisibility2}
+                    >
+                      <FontAwesomeIcon
+                        icon={showPassword2 ? faEyeSlash : faEye}
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div className="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="createAccount"
+                    defaultChecked
+                  />
+                  <label className="form-check-label" htmlFor="createAccount">
+                    Create an account?
+                  </label>
+                </div>
+                <div className="text-center">
+                  <button type="submit" className="btn btn-primary">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+              <div className="text-center mt">
+                Already have an account?{" "}
+                
+                  <Link to="/login" type="submit" className="">
+                    Login
+                  </Link>
+              
               </div>
             </div>
-            <div className="mb-3 position-relative">
-              <label htmlFor="confirmPassword" className="form-label">
-                Confirm Password
-              </label>
-              <div className="input-group">
-                <input
-                  type={showPassword2 ? "text" : "password"}
-                  className="form-control"
-                  id="confirmPassword"
-                  ref={confirmPasswordRef}
-                  required
-                />
-                <span
-                  className="input-group-text eye-icon"
-                  onClick={togglePasswordVisibility2}
-                >
-                  <FontAwesomeIcon icon={showPassword2 ? faEyeSlash : faEye} />
-                </span>
-              </div>
-            </div>
-            <div className="mb-3 form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="createAccount"
-                defaultChecked
-              />
-              <label className="form-check-label" htmlFor="createAccount">
-                Create an account?
-              </label>
-            </div>
-            <div className="text-center">
-              <button type="submit" className="btn btn-primary">
-                Sign Up
-              </button>
-            </div>
-          </form>
-          <div className="text-center">Already have an account?</div>
-          <div className="text-center">
-            <Link to="/login" type="submit" className="btn btn-dark">
-              Login
-            </Link>
           </div>
-          <p className="text-danger mt-3" ref={errorRef}></p>
         </div>
       </div>
     </div>

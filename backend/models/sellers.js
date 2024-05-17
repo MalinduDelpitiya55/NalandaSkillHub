@@ -1,11 +1,25 @@
 import mongoose from 'mongoose';
 
-const userSchema = new mongoose.Schema({
-    name: String,
+const { Schema } = mongoose;
+
+const sellerSchema = new Schema({
+    fname: String,
+    mname: String,
+    lname: String,
+    uname: String,
     email: String,
-    password: String
+    phoneNumber: String,
+    dob: Date,
+    gender: String,
+    password: String,
+    confirmPassword: String,
+    country: String,
+    timezone: String,
+    description: String,
+    skills: [String],
+    profilePicture: String
 });
 
-const sellers = mongoose.model('sellers', userSchema);
+const Seller = mongoose.model('Seller', sellerSchema);
 
-export default sellers;
+export default Seller;
