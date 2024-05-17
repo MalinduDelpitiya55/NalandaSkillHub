@@ -9,7 +9,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const CardList = () => {
     return (
-        <div>
+        <div style={{ marginTop:'70px'}}>
             <style>
                 {`
                 * {
@@ -108,7 +108,7 @@ const CardList = () => {
                 <a href="#" className="card-item">
                     <img src={JobPostImg1} alt="Card Image" />
                   
-            <div>
+            {/* <div>
             
             <img style={{
                     borderRadius: '50%',
@@ -124,7 +124,7 @@ const CardList = () => {
             <p style={{ textAlign: 'end' }}>United Kingdom <span className="profile rating">4.8</span></p>
                 </div>
 
-            </div>
+            </div> */}
 
                     <div className="text">
                         <h3>I will design modern minimalist luxury business logo design.</h3>

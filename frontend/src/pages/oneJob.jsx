@@ -11,7 +11,7 @@ export default function jobPost() {
   return (
     <div>
       <Navbar/>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '10px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '10px', marginTop:'70px'}} >
         <div style={{ textAlign: 'left' }}>
           <h3>I will design modern minimalist luxury business logo design.</h3>
         </div>
