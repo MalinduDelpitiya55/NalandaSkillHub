@@ -1,52 +1,119 @@
 import React, { useState } from 'react';
-import 'https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css';
-import './css/rating.css';
-// import './js/rating.js';
+import { Rating } from '@mui/material';
 
-const FormReviews = () => {
-  const [rating, setRating] = useState(0);
-  const [opinion, setOpinion] = useState('');
-
-  const handleRating = (index) => {
-    setRating(index + 1);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(`Rating: ${rating}, Opinion: ${opinion}`);
-  };
+const RatingComponent = () => {
+  const [value, setValue] = useState(2); // Initial value
 
   return (
-    <div className="wrapper">
-      <h4>How was your Experience?</h4>
-      <form onSubmit={handleSubmit}>
-        <div className="rating">
-          <input type="number" name="rating" hidden value={rating} readOnly />
-          {Array(5).fill(0).map((_, idx) => (
-            <i
-              key={idx}
-              className={`bx star ${idx < rating ? 'bxs-star active' : 'bx-star'}`}
-              style={{ '--i': idx }}
-              onClick={() => handleRating(idx)}
-            ></i>
-          ))}
-        </div>
-        <textarea
-          name="opinion"
-          cols="30"
-          rows="5"
-          placeholder="Your opinion..."
-          value={opinion}
-          onChange={(e) => setOpinion(e.target.value)}
-        ></textarea>
-        <div className="btn-group">
-          <button type="submit" className="btn submit">Submit</button>
-          <button type="button" className="btn cancel" onClick={() => setOpinion('')}>Cancel</button>
-        </div>
-      </form>
+    <>
+    <div>
+     
     </div>
+    <div
+    style={{
+      background: '#FFF',
+      padding: '2rem',
+      maxWidth: '576px',
+      width: '100%',
+      borderRadius: '0.75rem',
+      boxShadow: '8px 8px 30px rgba(0, 0, 0, .05)',
+      textAlign: 'center',
+    }}
+  >
+    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>
+      How was your Experience ?
+    </h4>
+    <form action="#">
+      
+    <Rating
+        name="simple-controlled"
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      />
+      
+      <div
+        className="rating"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gridGap: '0.5rem',
+          fontSize: '1.5rem',
+          color: '#FFBD13',
+          marginBottom: '2rem',
+        }}
+        
+      >
+      
+      </div>
+      <textarea
+        name="opinion"
+        cols="30"
+        rows="5"
+        placeholder="Your opinion..."
+        style={{
+          width: '100%',
+          background: '#F5F5F5',
+          padding: '1rem',
+          borderRadius: '0.5rem',
+          border: 'none',
+          outline: 'none',
+          resize: 'none',
+          marginBottom: '0.5rem',
+        }}
+        
+        onChange={(e) => setOpinion(e.target.value)}
+      ></textarea>
+      <div
+        style={{
+          display: 'flex',
+          gridGap: '0.5rem',
+          alignItems: 'center',
+        }}
+        className="btn-group"
+      >
+        <button
+          type="submit"
+          className="btn submit"
+          style={{
+            padding: '0.75rem 1rem',
+            borderRadius: '0.5rem',
+            border: 'none',
+            outline: 'none',
+            cursor: 'pointer',
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            background: '#4383FF',
+            color: '#FFF',
+          }}
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          className="btn cancel"
+          style={{
+            padding: '0.75rem 1rem',
+            borderRadius: '0.5rem',
+            border: 'none',
+            outline: 'none',
+            cursor: 'pointer',
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            background: '#FFF',
+            color: '#4383FF',
+          }}
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+
+</>
   );
 };
 
-export default FormReviews;
+export default RatingComponent;
