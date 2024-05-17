@@ -11,6 +11,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Business from "./../assets/images/home/business.png";
 import Qualities from "./../assets/images/home/qualities.png";
 import Tick from "./../assets/images/home/tick.svg";
+import Logo from "./../assets/images/home/logo.png";
+import Logo1 from "./../assets/images/home/logo1.png";
 
 
 const Home = () => {
@@ -420,7 +422,7 @@ const Home = () => {
               <div className="fvr-busns-content col-md-5 col-12">
                 <small>
                   <i>
-                    <img src="./assets/img/logo.png" width={170} height={33} alt="proconnect" />
+                    <img src={Logo} width={170} height={33} alt="proconnect" />
                   </i>
                   <span className="bg-primary rounded-5 px-2 py-1" style={{fontSize: '10px'}}>NEW</span>
                 </small>
