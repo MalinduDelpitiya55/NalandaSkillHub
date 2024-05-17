@@ -11,6 +11,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Business from "./../assets/images/home/business.png";
 import Qualities from "./../assets/images/home/qualities.png";
 import Tick from "./../assets/images/home/tick.svg";
+import Logo from "./../assets/images/home/logo.png";
+import Logo1 from "./../assets/images/home/logo1.png";
 
 
 const Home = () => {
@@ -391,7 +393,7 @@ const Home = () => {
                   </li>
                   <li>
                     <div>
-                      <img src="./assets/svg/tick.svg" alt="success" />
+                      <img src={Tick} alt="success" />
                       <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">24/7 support</span>
                     </div>
                     <p className="text-muted" style={{fontSize: '1.2rem'}}>Questions? Our round-the-clock support team is available to
@@ -420,7 +422,7 @@ const Home = () => {
               <div className="fvr-busns-content col-md-5 col-12">
                 <small>
                   <i>
-                    <img src="./assets/img/logo.png" width={170} height={33} alt="proconnect" />
+                    <img src={Logo} width={170} height={33} alt="proconnect" />
                   </i>
                   <span className="bg-primary rounded-5 px-2 py-1" style={{fontSize: '10px'}}>NEW</span>
                 </small>
@@ -429,16 +431,16 @@ const Home = () => {
                 <p className="fs-5 ">Upgrade to a curated experience packed with tools and benefits, dedicated to businesses</p>
                 <ul className="d-flex flex-column">
                   <li className="d-flex my-1 align-items-start">
-                    <img src="./assets/svg/tick.svg" alt="success" />
+                    <img src={Tick} alt="success" />
                     <p style={{fontSize: '1.1rem'}} className="ms-3">Connect to freelancers with proven business experience</p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
-                    <img src="./assets/svg/tick.svg" alt="success" />
+                    <img src={Tick} alt="success" />
                     <p style={{fontSize: '1.1rem'}} className="ms-3">Get matched with the perfect talent by a customer success
                       manager</p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
-                    <img src="./assets/svg/tick.svg" alt="success" />
+                    <img src={Tick} alt="success" />
                     <p style={{fontSize: '1.1rem'}} className="ms-3">Manage teamwork and boost productivity with one powerful
                       workspace</p>
                   </li>
