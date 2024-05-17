@@ -1,4 +1,4 @@
-import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap-icons/font/bootstrap-icons.css';
 import './js/content.js';
@@ -19,10 +19,9 @@ const Home = () => {
   
 
   return (
-
     <>
-     {/* CSS */}
-     <style>
+      {/* CSS */}
+      <style>
         {`
             * {
                 margin: 0;
@@ -324,78 +323,140 @@ const Home = () => {
               }
         `}
       </style>
-    
+
       <div>
         <header>
           {/* Top navbar */}
           {/* Hero section */}
           <section className="hero d-flex justify-content-start ps-md-5 px-2">
             <div className="content text-black d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-start">
-              <h1>Find the perfect <span className="fst-italic fw-normal">freelance</span> services for your business</h1>
-              <div className="input-group fw-semibold w-100 mx-auto d-flex justify-content-center justify-content-md-start" style={{position: 'relative', zIndex: 1}}>
-                <input className="border-0 px-3 w-75" style={{borderRadius: '5px 0 0 5px'}} placeholder="Try &quot;building mobile app&quot;" type="text" name="search" id="search" />
-                <input className="border-0 px-4 text-white" style={{backgroundColor: 'var(--primary--color-p)', borderRadius: '0 5px 5px 0'}} type="button" defaultValue="Search" />
+              <h1>
+                Find the perfect{" "}
+                <span className="fst-italic fw-normal">freelance</span> services
+                for your business
+              </h1>
+              <div
+                className="input-group fw-semibold w-100 mx-auto d-flex justify-content-center justify-content-md-start"
+                style={{position: "relative", zIndex: 1}}
+              >
+                <input
+                  className="border-0 px-3 w-75"
+                  style={{borderRadius: "5px 0 0 5px"}}
+                  placeholder='Try "building mobile app"'
+                  type="text"
+                  name="search"
+                  id="search"
+                />
+                <input
+                  className="border-0 px-4 text-white"
+                  style={{
+                    backgroundColor: "var(--primary--color-p)",
+                    borderRadius: "0 5px 5px 0",
+                  }}
+                  type="button"
+                  defaultValue="Search"
+                />
               </div>
               <div className="tag-group d-flex mt-4 align-items-center justify-content-center ">
                 <div className="fw-semibold align-middle">Popular: </div>
                 <div className="d-flex flex-wrap text-center align-items-center fw-semibold">
-                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">Website Design</span>
-                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">Wordpress</span>
-                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">Logo Design</span>
-                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">Video Editing</span>
+                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">
+                    Website Design
+                  </span>
+                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">
+                    Wordpress
+                  </span>
+                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">
+                    Logo Design
+                  </span>
+                  <span className="border border-1 rounded-5 px-2 py-1 mx-1 mt-1">
+                    Video Editing
+                  </span>
                 </div>
               </div>
             </div>
           </section>
-          <section className="clients bg-secondary bg-opacity-10" id="clients-container">
-          </section>
+          <section
+            className="clients bg-secondary bg-opacity-10"
+            id="clients-container"
+          ></section>
         </header>
         <main>
           {/* Popular Services */}
 
-          <div id="Services"><Slideimg/></div>
+          <div id="Services">
+            <Slideimg />
+          </div>
 
           {/* Our Qualities */}
-          <section className="our-qlts py-5 px-3 px-sm-4 px-md-5" style={{backgroundColor: '#f1fdf7'}}>
+          <section
+            className="our-qlts py-5 px-3 px-sm-4 px-md-5"
+            style={{backgroundColor: "#f1fdf7"}}
+          >
             <div className="my-5 row align-items-center">
               <div className="qlts-content col-md-5 col-12">
-                <h1 style={{fontSize: '2.1rem'}} className="mb-4">A whole world of freelance talent at your fingertips</h1>
+                <h1 style={{fontSize: "2.1rem"}} className="mb-4">
+                  A whole world of freelance talent at your fingertips
+                </h1>
                 <ul className="d-flex flex-column">
                   <li>
                     <div>
                       <img src={Tick} alt="success" />
-                      <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">The best for every budget</span>
+                      <span
+                        style={{fontSize: "1.2rem"}}
+                        className="fw-semibold ms-1"
+                      >
+                        The best for every budget
+                      </span>
                     </div>
-                    <p className="text-muted" style={{fontSize: '1.2rem'}}>Find high-quality services at every price point. No hourly
-                      rates, just
-                      project-based
-                      pricing.</p>
+                    <p className="text-muted" style={{fontSize: "1.2rem"}}>
+                      Find high-quality services at every price point. No hourly
+                      rates, just project-based pricing.
+                    </p>
                   </li>
                   <li>
                     <div>
-                    <img src={Tick} alt="success" />
-                      <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">Quality work done quickly</span>
+                      <img src={Tick} alt="success" />
+                      <span
+                        style={{fontSize: "1.2rem"}}
+                        className="fw-semibold ms-1"
+                      >
+                        Quality work done quickly
+                      </span>
                     </div>
-                    <p className="text-muted" style={{fontSize: '1.2rem'}}>Find the right freelancer to begin working on your project
-                      within minutes.</p>
+                    <p className="text-muted" style={{fontSize: "1.2rem"}}>
+                      Find the right freelancer to begin working on your project
+                      within minutes.
+                    </p>
                   </li>
                   <li>
                     <div>
-                    <img src={Tick} alt="success" />
-                      <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">Protected payments, every time</span>
+                      <img src={Tick} alt="success" />
+                      <span
+                        style={{fontSize: "1.2rem"}}
+                        className="fw-semibold ms-1"
+                      >
+                        Protected payments, every time
+                      </span>
                     </div>
-                    <p className="text-muted" style={{fontSize: '1.2rem'}}>Always know what you'll pay upfront. Your payment isn't
-                      released until you approve
-                      the
-                      work.</p>
+                    <p className="text-muted" style={{fontSize: "1.2rem"}}>
+                      Always know what you&apos;ll pay upfront. Your payment
+                      isn&apos;t released until you approve the work.
+                    </p>
                   </li>
                   <li>
                     <div>
                       <img src="./assets/svg/tick.svg" alt="success" />
-                      <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">24/7 support</span>
+                      <span
+                        style={{fontSize: "1.2rem"}}
+                        className="fw-semibold ms-1"
+                      >
+                        24/7 support
+                      </span>
                     </div>
-                    <p className="text-muted" style={{fontSize: '1.2rem'}}>Questions? Our round-the-clock support team is available to
-                      help anytime, anywhere.
+                    <p className="text-muted" style={{fontSize: "1.2rem"}}>
+                      Questions? Our round-the-clock support team is available
+                      to help anytime, anywhere.
                     </p>
                   </li>
                 </ul>
@@ -403,58 +464,89 @@ const Home = () => {
               <div className="col-md-1 col-12" />
               <div className="qlts-video-wrapper col-md-6 col-12">
                 <picture className="w-100 qlts-video-thumb">
-                  <img className="w-100" style={{cursor: 'pointer'}} src={Qualities} alt="Qualities" />
+                  <img
+                    className="w-100"
+                    style={{cursor: "pointer"}}
+                    src={Qualities}
+                    alt="Qualities"
+                  />
                 </picture>
               </div>
             </div>
           </section>
           {/* Explore */}
 
-      
           <section className="explore py-5 px-3 px-sm-4 px-md-5" id="explore">
-            <h1 className="mt-5" style={{fontSize: '2.1rem'}}>Explore the marketplace</h1>
+            <h1 className="mt-5" style={{fontSize: "2.1rem"}}>
+              Explore the marketplace
+            </h1>
           </section>
           {/* proconnect business */}
-          <section className="fvr-busns py-5 px-3 px-sm-4 px-md-5 text-white" style={{backgroundColor: '#0d084d'}}>
+          <section
+            className="fvr-busns py-5 px-3 px-sm-4 px-md-5 text-white"
+            style={{backgroundColor: "#0d084d"}}
+          >
             <div className="my-5 row align-items-center">
               <div className="fvr-busns-content col-md-5 col-12">
                 <small>
                   <i>
-                    <img src="./assets/img/logo.png" width={170} height={33} alt="proconnect" />
+                    <img
+                      src="./assets/img/logo.png"
+                      width={170}
+                      height={33}
+                      alt="proconnect"
+                    />
                   </i>
-                  <span className="bg-primary rounded-5 px-2 py-1" style={{fontSize: '10px'}}>NEW</span>
+                  <span
+                    className="bg-primary rounded-5 px-2 py-1"
+                    style={{fontSize: "10px"}}
+                  >
+                    NEW
+                  </span>
                 </small>
-                <h1 style={{fontSize: '2.1rem'}} className="my-4">A business solution designed for <span className="fst-italic fw-normal">teams</span>
+                <h1 style={{fontSize: "2.1rem"}} className="my-4">
+                  A business solution designed for{" "}
+                  <span className="fst-italic fw-normal">teams</span>
                 </h1>
-                <p className="fs-5 ">Upgrade to a curated experience packed with tools and benefits, dedicated to businesses</p>
+                <p className="fs-5 ">
+                  Upgrade to a curated experience packed with tools and
+                  benefits, dedicated to businesses
+                </p>
                 <ul className="d-flex flex-column">
                   <li className="d-flex my-1 align-items-start">
                     <img src="./assets/svg/tick.svg" alt="success" />
-                    <p style={{fontSize: '1.1rem'}} className="ms-3">Connect to freelancers with proven business experience</p>
+                    <p style={{fontSize: "1.1rem"}} className="ms-3">
+                      Connect to freelancers with proven business experience
+                    </p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
                     <img src="./assets/svg/tick.svg" alt="success" />
-                    <p style={{fontSize: '1.1rem'}} className="ms-3">Get matched with the perfect talent by a customer success
-                      manager</p>
+                    <p style={{fontSize: "1.1rem"}} className="ms-3">
+                      Get matched with the perfect talent by a customer success
+                      manager
+                    </p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
                     <img src="./assets/svg/tick.svg" alt="success" />
-                    <p style={{fontSize: '1.1rem'}} className="ms-3">Manage teamwork and boost productivity with one powerful
-                      workspace</p>
+                    <p style={{fontSize: "1.1rem"}} className="ms-3">
+                      Manage teamwork and boost productivity with one powerful
+                      workspace
+                    </p>
                   </li>
                 </ul>
               </div>
               <div className="col-md-1 col-12" />
               <div className="fvr-busns-img-wrapper col-md-6 col-12">
                 <picture className="w-100 fvr-busns-img-thumb">
-                <img className="w-100" src={Business} alt="Business" />
+                  <img className="w-100" src={Business} alt="Business" />
                 </picture>
               </div>
             </div>
           </section>
-        </main></div>
-        </>
-    );
+        </main>
+      </div>
+    </>
+  );
   }
 
 export default Home;

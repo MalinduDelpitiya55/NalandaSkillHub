@@ -103,12 +103,12 @@ const handleSubmit = async (e) => {
     switch (step) {
       case 1:
         return (
-          <div className="row p-5" style={{ backgroundColor: "#ecf8ff" }}>
+          <div className="row p-5" style={{backgroundColor: "#ecf8ff"}}>
             <div
-              className="col-lg-6 col-xl-6  p-5"
+              className="col-lg-5 col-xl-5  p-5"
               id="Signin-Background"
             ></div>
-            <div className="col-lg-6 col-xl-6 col-md-12">
+            <div className="col-lg-7 col-xl-7 col-md-12">
               <div className="card   p-2" style={{backgroundColor: "#ecf8ff"}}>
                 <div className=" mx-3 ">
                   <h2>Step 1</h2>
@@ -118,7 +118,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="fname"
                         name="fname"
-                        className="col-12"
+                        className="form-control col-12"
                         value={formData.fname}
                         onChange={handleChange}
                         placeholder="First Name"
@@ -129,7 +129,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="lname"
                         name="lname"
-                        className="col-12"
+                        className="form-control col-12"
                         value={formData.lname}
                         onChange={handleChange}
                         placeholder="Last Name"
@@ -142,7 +142,7 @@ const handleSubmit = async (e) => {
                         type="email"
                         id="email"
                         name="email"
-                        className="col-12"
+                        className="form-control col-12"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
@@ -219,7 +219,7 @@ const handleSubmit = async (e) => {
                           type="date"
                           id="dob"
                           name="dob"
-                          className="flex-fill"
+                          className="form-control flex-fill"
                           value={formData.dob}
                           onChange={handleChange}
                         />
@@ -228,7 +228,7 @@ const handleSubmit = async (e) => {
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4 mt-sm-4">
                       <div className="col-12 d-flex flex-row">
                         <select
-                          className="form-select form-select-sm"
+                          className="form-select form-select-sm form-control "
                           aria-label="Default select example"
                           value={formData.gender}
                           onChange={handleChange}
@@ -251,7 +251,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="country"
                         name="country"
-                        className="col-12"
+                        className="col-12 form-control "
                         value={formData.country}
                         onChange={handleChange}
                         placeholder="Country"
@@ -262,7 +262,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="timezone"
                         name="timezone"
-                        className="col-12"
+                        className="form-control col-12"
                         value={formData.timezone}
                         onChange={handleChange}
                         placeholder="Timezone"
@@ -291,13 +291,13 @@ const handleSubmit = async (e) => {
         );
       case 2:
         return (
-          <div className="row -5" style={{backgroundColor: "#ecf8ff"}}>
+          <div className="row -5 p-5" style={{backgroundColor: "#ecf8ff"}}>
             <div
               className="col-lg-6 col-xl-6  p-5"
               id="Signin-Background"
             ></div>
             <div className="col-lg-6 col-xl-6 col-md-12">
-              <div className="card  p-4 ">
+              <div className="card  p-4 " style={{backgroundColor: "#ecf8ff"}}>
                 <div>
                   <h2>Step 2</h2>
 
@@ -329,7 +329,7 @@ const handleSubmit = async (e) => {
                         <div className="custom-file ">
                           <input
                             type="file"
-                            className="custom-file-input"
+                            className="custom-file-input form-control "
                             id="profilePicture"
                             onChange={handleChangeForpp}
                             accept="image/*"

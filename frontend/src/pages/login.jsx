@@ -2,12 +2,21 @@
 import React from 'react'
 
 import Login from "./../components/login";
-
-
-export default function login() {
+import Navbar from "./../components/navbar";
+import Footer from "./../components/footer";
+export default function buyerSignup() {
   return (
     <div>
-      <Login />
+      <header>
+        <Navbar />
+      </header>
+      <div className="mt-5">
+        <Login />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
+
