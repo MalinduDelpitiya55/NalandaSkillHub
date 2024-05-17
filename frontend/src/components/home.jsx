@@ -449,7 +449,12 @@ const Home = () => {
                   <li>
                     <div>
                       <img src={Tick} alt="success" />
-                      <span style={{fontSize: '1.2rem'}} className="fw-semibold ms-1">24/7 support</span>
+                      <span
+                        style={{fontSize: "1.2rem"}}
+                        className="fw-semibold ms-1"
+                      >
+                        24/7 support
+                      </span>
                     </div>
                     <p className="text-muted" style={{fontSize: "1.2rem"}}>
                       Questions? Our round-the-clock support team is available
@@ -506,20 +511,24 @@ const Home = () => {
                 </p>
                 <ul className="d-flex flex-column">
                   <li className="d-flex my-1 align-items-start">
-                    <img src="./assets/svg/tick.svg" alt="success" />
+                    <img src={Tick} alt="success" />
                     <p style={{fontSize: "1.1rem"}} className="ms-3">
                       Connect to freelancers with proven business experience
                     </p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
                     <img src={Tick} alt="success" />
-                    <p style={{fontSize: '1.1rem'}} className="ms-3">Get matched with the perfect talent by a customer success
-                      manager</p>
+                    <p style={{fontSize: "1.1rem"}} className="ms-3">
+                      Get matched with the perfect talent by a customer success
+                      manager
+                    </p>
                   </li>
                   <li className="d-flex my-1 align-items-start">
                     <img src={Tick} alt="success" />
-                    <p style={{fontSize: '1.1rem'}} className="ms-3">Manage teamwork and boost productivity with one powerful
-                      workspace</p>
+                    <p style={{fontSize: "1.1rem"}} className="ms-3">
+                      Manage teamwork and boost productivity with one powerful
+                      workspace
+                    </p>
                   </li>
                 </ul>
               </div>
