@@ -1,11 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import JobPostImg1 from './../assets/jobPost/img1.jpg'; // Import your image assets
+import JobPostImg1 from './../assets/jobPost/img1.jpg';
 import JobPostImg2 from './../assets/jobPost/img2.jpg';
 import JobPostImg3 from './../assets/jobPost/img3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons'; // Import the regular heart icon
+import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 
 
 const CardList = () => {
