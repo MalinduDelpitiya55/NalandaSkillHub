@@ -711,7 +711,7 @@ const CardList = () => {
                     </div>
                     <hr />
                     <div className="cardfooter">
-                    <p><FontAwesomeIcon icon={faHeart} /></p>
+                    <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
