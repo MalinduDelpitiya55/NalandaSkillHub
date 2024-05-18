@@ -24,7 +24,7 @@ const CardList = () => {
                     background: #ecececdb;
                 }
                 
-                .card-list {
+                .cardfooter-list {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
                     max-width: 80%;
@@ -33,7 +33,7 @@ const CardList = () => {
                     gap: 20px;
                 }
                 
-                .card-list .card-item {
+                .cardfooter-list .cardfooter-item {
                     background: #fff;
                     padding: 6px;
                     border-radius: 8px;
@@ -45,18 +45,18 @@ const CardList = () => {
                     transition: border 0.5s ease;
                 }
                 
-                .card-list .card-item:hover {
+                .cardfooter-list .cardfooter-item:hover {
                     border: 2px solid #000;
                 }
                 
-                .card-list .card-item img {
+                .cardfooter-list .cardfooter-item img {
                     width: 100%;
                     aspect-ratio: 16/9;
                     border-radius: 8px;
                     object-fit: cover;
                 }
                 
-                .card-item h3 {
+                .cardfooter-item h3 {
                     color: #000;
                     font-size:15px;
                     margin-top: 28px;
@@ -81,7 +81,7 @@ const CardList = () => {
                     margin-bottom: 20px;
                 }
                 
-                .footer {
+                .cardfooter {
                     display:flex;
                     justify-content:space-between;
                     align-items:center;  
@@ -98,21 +98,21 @@ const CardList = () => {
                 }
                 
                 @media (max-width: 1200px) {
-                    .card-list .card-item {
+                    .cardfooter-list .cardfooter-item {
                         padding: 15px;
                     }
                 }
                 
                 @media screen and (max-width: 980px) {
-                    .card-list {
+                    .cardfooter-list {
                         margin: 0 auto;
                     }
                 }
                 `}
             </style>
             {/* card1 */}
-            <div className="card-list">
-                <a href="#" className="card-item">
+            <div className="cardfooter-list">
+                <a href="#" className="cardfooter-item">
                     <img src={JobPostImg1} alt="Card Image" />
                   
             <div>
@@ -138,14 +138,14 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
 
                   {/* card2 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
 
                 <div>
@@ -170,13 +170,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card3 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                  <img src={JobPostImg3} alt="Card Image" />
                  <div>
             
@@ -200,13 +200,13 @@ const CardList = () => {
                         <h3>I will create minimal and luxury logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card4 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg1} alt="Card Image" />
                 <div>
             
@@ -230,13 +230,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card5 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -260,13 +260,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card6 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                     <img src={JobPostImg1} alt="Card Image" />
                     <div>
             
@@ -290,13 +290,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card7 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg3} alt="Card Image" />
                 <div>
             
@@ -320,13 +320,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                   {/* card8 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                  <img src={JobPostImg1} alt="Card Image" />
                  <div>
             
@@ -350,13 +350,13 @@ const CardList = () => {
                         <h3>I will create minimal and luxury logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card9 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -380,13 +380,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card10 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -410,13 +410,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card11 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                     <img src={JobPostImg3} alt="Card Image" />
                     <div>
             
@@ -440,13 +440,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card12 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg1} alt="Card Image" />
                 <div>
             
@@ -470,13 +470,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card13 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                  <img src={JobPostImg3} alt="Card Image" />
                  <div>
             
@@ -500,13 +500,13 @@ const CardList = () => {
                         <h3>I will create minimal and luxury logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card14 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg1} alt="Card Image" />
                 <div>
             
@@ -530,13 +530,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card15 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -560,13 +560,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card16 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                     <img src={JobPostImg1} alt="Card Image" />
                     <div>
             
@@ -590,13 +590,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card17 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -620,13 +620,13 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card18 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                  <img src={JobPostImg3} alt="Card Image" />
                  <div>
             
@@ -650,13 +650,13 @@ const CardList = () => {
                         <h3>I will create minimal and luxury logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card19 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg1} alt="Card Image" />
                 <div>
             
@@ -680,13 +680,13 @@ const CardList = () => {
                         <h3>I will design modern minimalist luxury business logo design.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
+                    <div className="cardfooter">
                     <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
                  {/* card20 */}
-                <a href="#" className="card-item">
+                <a href="#" className="cardfooter-item">
                 <img src={JobPostImg2} alt="Card Image" />
                 <div>
             
@@ -710,8 +710,8 @@ const CardList = () => {
                         <h3>I will design a professional sponsorship proposal, business proposal, and letter.</h3>
                     </div>
                     <hr />
-                    <div className="footer">
-                    <p><FontAwesomeIcon icon={faHeartRegular} style={{ color: 'black' }} /></p>
+                    <div className="cardfooter">
+                    <p><FontAwesomeIcon icon={faHeart} /></p>
                         <span className="amt">Rs39393</span>
                     </div>
                 </a>
