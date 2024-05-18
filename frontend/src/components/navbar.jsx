@@ -18,7 +18,7 @@ function Navbars() {
             --primary--color: #0b014c;
             --primary--color-p: #0b014c;
             margin: 0;
-            padding: 0;
+            padding : 0;
             font-size: 16px;
             font-family: "Roboto", sans-serif !important;
           }

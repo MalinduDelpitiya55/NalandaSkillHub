@@ -5,6 +5,7 @@ import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import Tagify from "./test";
 import "./css/signin-seller.css";
 import DefaultPP from "./../assets/images/profile-circle.svg";
+
 function MultiStepForm() {
 
 const handleSubmit = async (e) => {
@@ -103,22 +104,21 @@ const handleSubmit = async (e) => {
     switch (step) {
       case 1:
         return (
-          <div className="row p-5" style={{ backgroundColor: "#ecf8ff" }}>
+          <div className="bodyreg row vh-100" >
             <div
-              className="col-lg-6 col-xl-6  p-5"
-              id="Signin-Background"
-            ></div>
+              className="col-lg-6 col-xl-6  p-5">
+            </div>
             <div className="col-lg-6 col-xl-6 col-md-12">
-              <div className="card   p-2" style={{backgroundColor: "#ecf8ff"}}>
+              <div className="singcard p-2 bg-opacity-50" >
                 <div className=" mx-3 ">
-                  <h2>Step 1</h2>
+                  <h2 className="step1">Step 1</h2>
                   <div className="row mx-5  mt-5">
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-0">
                       <input
                         type="text"
                         id="fname"
                         name="fname"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.fname}
                         onChange={handleChange}
                         placeholder="First Name"
@@ -129,7 +129,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="lname"
                         name="lname"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.lname}
                         onChange={handleChange}
                         placeholder="Last Name"
@@ -142,7 +142,7 @@ const handleSubmit = async (e) => {
                         type="email"
                         id="email"
                         name="email"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
@@ -153,7 +153,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="phoneNumber"
                         name="phoneNumber"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.phoneNumber}
                         onChange={handleChange}
                         placeholder="Phone Number"
@@ -166,7 +166,7 @@ const handleSubmit = async (e) => {
                         <div className="input-group ">
                           <input
                             type={showPassword1 ? "text" : "password"}
-                            className="form-control "
+                            className="input1 form-control "
                             id="password"
                             name="password"
                             onChange={handleChange}
@@ -190,7 +190,7 @@ const handleSubmit = async (e) => {
                         <div className="input-group ">
                           <input
                             type={showPassword2 ? "text" : "password"}
-                            className="form-control"
+                            className="input1 form-control"
                             id="confirmPassword"
                             name="confirmPassword"
                             onChange={handleChange}
@@ -213,13 +213,13 @@ const handleSubmit = async (e) => {
                   <div className="row mt-lg-5  mt-md-4 mt-sm-4 mx-5">
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4 ">
                       <div className="col-12 d-flex flex-row">
-                        <label htmlFor="dob">Birthday :</label>
+                        <label className="lbbirthday" htmlFor="dob">Birthday : </label>
 
                         <input
                           type="date"
                           id="dob"
                           name="dob"
-                          className="flex-fill"
+                          className="input2 flex-fill"
                           value={formData.dob}
                           onChange={handleChange}
                         />
@@ -228,7 +228,7 @@ const handleSubmit = async (e) => {
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4 mt-sm-4">
                       <div className="col-12 d-flex flex-row">
                         <select
-                          className="form-select form-select-sm"
+                          className="input3 form-select form-select-sm"
                           aria-label="Default select example"
                           value={formData.gender}
                           onChange={handleChange}
@@ -251,7 +251,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="country"
                         name="country"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.country}
                         onChange={handleChange}
                         placeholder="Country"
@@ -262,7 +262,7 @@ const handleSubmit = async (e) => {
                         type="text"
                         id="timezone"
                         name="timezone"
-                        className="col-12"
+                        className="input1 col-12"
                         value={formData.timezone}
                         onChange={handleChange}
                         placeholder="Timezone"
