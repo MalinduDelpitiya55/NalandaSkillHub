@@ -12,7 +12,6 @@ import Profile from "./pages/profile";
 import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
 import Test from "./components/test";
-import AdminJobPost from "./pages/adminJobPost";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -34,7 +33,6 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/adminJobPost" element={<AdminJobPost />} />
 
       </Routes>
     </Router>
