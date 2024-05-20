@@ -1,5 +1,5 @@
 .bodyreg{
-    background-image: url('./../../assets/images/regback.jpg') ;
+    background-image: url('./../../assets/images/regback.jpeg') ;
     background-repeat: no-repeat;
     
    
@@ -7,7 +7,7 @@
 }
 
 .singcard{
-    border: 1px solid hsl(0, 0%, 87%);
+    border: 1px solid #dedede;
             border-radius: 18px;
             padding: 16px;
             margin: 16px;
@@ -21,7 +21,7 @@
     padding: 5px 5px;
     font-size: 45px;
     font-weight: bold;
-    color: #1d0683;
+    color: #ffffff;
 }
 
 .input1 {
@@ -93,6 +93,61 @@
   }
 
   .lbbirthday{
-    color: #1d0683;
+    color: #ffffff;
     margin-top:10px;
+  }
+
+  .step2{
+    padding: 5px 5px;
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+  .input4 {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 190px; 
+    height: 150px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+.input4::placeholder {
+    color: #000000;
+  }
+  
+.input4:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .input5 {
+    padding: 1005px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 190px; 
+    height: 50px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+.input5::placeholder {
+    color: #000000;
+  }
+  
+.input5:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .step2lb{
+    color: #ffffff;
   }

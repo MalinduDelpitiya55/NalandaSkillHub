@@ -291,19 +291,19 @@ const handleSubmit = async (e) => {
         );
       case 2:
         return (
-          <div className="row -5" style={{backgroundColor: "#ecf8ff"}}>
+          <div className="bodyreg row -5" style={{backgroundColor: "#ecf8ff"}}>
             <div
               className="col-lg-6 col-xl-6  p-5"
               id="Signin-Background"
             ></div>
             <div className="col-lg-6 col-xl-6 col-md-12">
-              <div className="card  p-4 ">
+              <div className="singcard  p-4 ">
                 <div>
-                  <h2>Step 2</h2>
+                  <h2 className="step2">Step 2</h2>
 
                   <table className="mx-5">
                     <tr>
-                      <td className="col">Profile Picture</td>
+                      <td className="step2lb col">Profile Picture</td>
                       <td className="text-center col-6 align-items-center  ">
                         <div className="profile-picture ">
                           {file ? (
@@ -342,14 +342,14 @@ const handleSubmit = async (e) => {
                   <table className="mx-5 mt-5">
                     <tr className="col-7">
                       <td className="col-1">
-                        <label htmlFor="uname">User Name:</label>
+                        <label htmlFor="uname" className="step2lb">User Name:</label>
                       </td>
                       <td className="col-3 px-4">
                         <input
                           type="text"
                           id="uname"
                           name="uname"
-                          className="form-control col-2"
+                          className="input1 form-control col-2"
                           value={formData.uname}
                           onChange={handleChange}
                           placeholder="User Name"
@@ -358,7 +358,7 @@ const handleSubmit = async (e) => {
                     </tr>
                     <tr className="col-7">
                       <td className=" col-1">
-                        <label htmlFor="email" className="mt-5">
+                        <label htmlFor="email" className="step2lb mt-5">
                           Description:
                         </label>
                       </td>
@@ -367,7 +367,7 @@ const handleSubmit = async (e) => {
                           type="description"
                           id="description"
                           name="description"
-                          className="form-control mt-5"
+                          className="input4 form-control mt-5"
                           value={formData.description}
                           onChange={handleChange}
                         />
@@ -376,11 +376,11 @@ const handleSubmit = async (e) => {
 
                     <tr className="col-8 ">
                       <td className="col-1 align-items-start ">
-                        <label htmlFor="Tagify" className="mt-5">
+                        <label htmlFor="Tagify" className="step2lb mt-5">
                           Add your Skills:
                         </label>
                       </td>
-                      <td className="col-4">
+                      <td className=" col-4">
                         <Tagify />
                       </td>
                     </tr>

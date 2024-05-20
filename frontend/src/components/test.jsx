@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./css/signin-seller.css";
 
 class InputSkill extends Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class InputSkill extends Component {
                     onKeyDown={this.addSkill}
                     type="text"
                     size="4"
-                    className="form-control mt-5"
+                    className="input5 form-control mt-5"
                     ref={this.inputRef}
                     value={newSkill} // Bind input value
                     onChange={this.handleInputChange} // Handle input change
