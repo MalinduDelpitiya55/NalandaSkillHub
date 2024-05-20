@@ -29,7 +29,6 @@ export default function App() {
         <Route path="/jobpost" element={<Job />} />
         <Route path="/onejobpost" element={<OneJobPost />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/test" element={<Test />} />
 
