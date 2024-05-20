@@ -37,9 +37,6 @@ export default function App() {
         <Route path="/test" element={<Test />} />
         <Route path="/adminJobPost" element={<AdminJobPost />} />
 
-
-
-
       </Routes>
     </Router>
   );
