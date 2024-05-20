@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Rating } from '@mui/material';
 
+
 const rating= () => {
   const [value, setValue] = useState(2); // Initial value
 
   return (
     <>
-    <div>
-     
-    </div>
+    
     <div
     style={{
       background: '#FFF',
