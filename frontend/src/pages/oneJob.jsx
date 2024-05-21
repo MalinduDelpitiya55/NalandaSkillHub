@@ -4,7 +4,7 @@ import Navbar from "./../components/navbar";
 import Footer from "./../components/footer";
 import Propic from "./../assets/jobPost/propic.jpg";
 import Gig from "./../assets/jobPost/img1.jpg";
-
+import Review from "./../components/review";
 
 export default function jobPost() {
   return (
@@ -85,7 +85,7 @@ export default function jobPost() {
                 </div>
             </div>
         </main>
-
+< Review/>
 
       <Footer/>
     </div>

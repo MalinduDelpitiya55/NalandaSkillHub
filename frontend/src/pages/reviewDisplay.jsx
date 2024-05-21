@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Review from './../components/review'
 import Navbar from "./../components/navbar";
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const ReviewPage = () => {
   const [reviews, setReviews] = useState({
@@ -143,7 +143,7 @@ const ReviewPage = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '40px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f5f5f5' }}>
+    <div className='mx-5 p-5' style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '40px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f5f5f5' }}>
       <div style={styles.container}>
         <div style={styles.chart}>
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -162,11 +162,6 @@ const ReviewPage = () => {
         </div>
       </div>
       <h2 style={styles.sprHeaderTitle}>Customer Reviews</h2>
-      <div id="wrapper">
-        <div id="container">
-          <input style={styles.button} type="button" value="Write Review" />
-        </div>
-      </div>
       <div style={styles.review}>
         <p><strong>Neha De Silva</strong></p>
         <p><span style={styles.stars}>★★☆☆☆</span> - 10 months ago</p>
