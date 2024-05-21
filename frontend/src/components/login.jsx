@@ -34,11 +34,15 @@ function SignInForm() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("http://localhost:5001/login", {
         email,
         password,
-      });
+        
+      });console.log(res);
       if (res.status === 200) {
+        const token = res.data.accessToken;
+        console.log(token);
+        localStorage.setItem("accessToken", token);
         navigate("/"); // Navigate to /home
       }
     } catch (error) {
@@ -87,6 +91,7 @@ function SignInForm() {
                               type="email"
                               className="form-control"
                               id="email"
+                              //pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
                               ref={emailRef}
                               required
                             />

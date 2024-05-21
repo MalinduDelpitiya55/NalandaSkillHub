@@ -1,25 +1,61 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {useState, useEffect} from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import 'bootstrap-icons/font/bootstrap-icons.css';
-import './js/content.js';
- import './css/home.css';
- import Slideimg from './slider.jsx'
+import "./js/content.js";
+import "./css/home.css";
+import axios from "axios";
+import Slideimg from "./slider.jsx";
+import {useNavigate} from "react-router-dom";
 //  import Explore from './explore.jsx'
- import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Business from "./../assets/images/home/business.png";
 import Qualities from "./../assets/images/home/qualities.png";
 import Tick from "./../assets/images/home/tick.svg";
 import Logo from "./../assets/images/home/logo.png";
 //import Logo1 from "./../assets/images/home/logo1.png";
 
-
 const Home = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkTokenValidity = async () => {
+      try {
+        const token = localStorage.getItem("accessToken");
+        if (!token) {
+          throw new Error("No token found");
+        }
+
+        const response = await axios.get("http://localhost:5001", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (response.status === 200 && response.data) {
+          setIsLoggedIn(true);
+        } else {
+          throw new Error("Invalid token response");
+        }
+      } catch (error) {
+        console.error("Error checking token:", error);
+        setIsLoggedIn(false);
+        localStorage.removeItem("accessToken");
+      }
+    };
+
+    checkTokenValidity();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [isLoggedIn, navigate]);
 
   
-  
-
   return (
     <>
       {/* CSS */}
@@ -544,6 +580,6 @@ const Home = () => {
       </div>
     </>
   );
-  }
+};
 
 export default Home;
