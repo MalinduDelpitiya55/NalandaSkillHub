@@ -4,6 +4,8 @@ import Navbar from "./../components/navbar";
 import Footer from "./../components/footer";
 import Propic from "./../assets/jobPost/propic.jpg";
 import Gig from "./../assets/jobPost/img1.jpg";
+import PromoPackage from './../components/promoPackage';
+
 
 
 export default function jobPost() {
@@ -33,31 +35,19 @@ export default function jobPost() {
  <main style={{ padding: '10px' }}>
             <div className="container py-7">
                 <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-md-5">
                         <div className="card mb-4 " style={{alignItems:'center'}}>
                             <div className="card-body">
                                 <img src={Gig} className="img-thumbnail" alt="..." style={{ maxWidth: '100%' }} />
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-7">
                         <div className="card mb-4" style={{ backgroundColor: '#e3e9fc' }}>
-                            <div className="card-header" style={{ backgroundColor: '#aac0ff' }}>
-                                <p style={{ textAlign: 'center', color: '#000', margin: '0'}}>Standard</p>
-                            </div>
-                            <div className="card-body">
-                                <p style={{ textAlign: 'left', color: '#333' }}>STANDARD PROMO <span style={{ marginLeft: '110px', color: '#333' }}>$ 100</span></p>
-                                <div className="delivery">
-                                    <i className="fas fa-clock" style={{ marginRight: '5px', color: '#333', marginBottom:20,}}> 4 Days Delivery</i>
-                                    <ul>
-                                        <li>STANDARD 2 logo concept</li>
-                                        <li>vector file</li>
-                                        <li>source file</li>
-                                        <li>3D images</li>
-                                    </ul>
-                                    <button type="button" id="continueBtn" className="btn btn-primary d-block mx-auto" height="50px" width="50px">Continue</button>
-                                </div>
-                            </div>
+                          
+                            <div>
+                            <PromoPackage/>
+                        </div>
                         </div>
                     </div>
                 </div>
