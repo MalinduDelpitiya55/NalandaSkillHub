@@ -1,4 +1,4 @@
-import React from "react";
+
 import ReactCardSlider from "react-card-slider-component";
 import "./css/slide.css";
 
