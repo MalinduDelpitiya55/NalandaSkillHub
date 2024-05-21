@@ -143,7 +143,7 @@ const ReviewPage = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '40px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f5f5f5' }}>
+    <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '40px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#FFFFFF' }}>
       <div style={styles.container}>
         <div style={styles.chart}>
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -161,7 +161,7 @@ const ReviewPage = () => {
           <span style={styles.totalReviews}>{nFormat(totalReviews)}</span>
         </div>
       </div>
-      <h2 style={styles.sprHeaderTitle}>Customer Reviews</h2>
+      <h4 style={styles.sprHeaderTitle}>Customer Reviews</h4>
       <div id="wrapper">
         <div id="container">
           <input style={styles.button} type="button" value="Write Review" />
