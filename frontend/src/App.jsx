@@ -17,6 +17,8 @@ import Review from "./pages/reviewDisplay";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
+
 export default function App() {
   return (
     <Router>

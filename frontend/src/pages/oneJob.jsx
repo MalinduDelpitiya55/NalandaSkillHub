@@ -4,8 +4,7 @@ import Navbar from "./../components/navbar";
 import Footer from "./../components/footer";
 import Propic from "./../assets/jobPost/propic.jpg";
 import Gig from "./../assets/jobPost/img1.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function jobPost() {
   return (
@@ -44,7 +43,7 @@ export default function jobPost() {
                     <div className="col-md-4">
                         <div className="card mb-4" style={{ backgroundColor: '#e3e9fc' }}>
                             <div className="card-header" style={{ backgroundColor: '#aac0ff' }}>
-                                <p style={{ textAlign: 'left', color: '#fff', margin: '0' }}>Standard</p>
+                                <p style={{ textAlign: 'center', color: '#000', margin: '0'}}>Standard</p>
                             </div>
                             <div className="card-body">
                                 <p style={{ textAlign: 'left', color: '#333' }}>STANDARD PROMO <span style={{ marginLeft: '110px', color: '#333' }}>$ 100</span></p>
@@ -56,7 +55,7 @@ export default function jobPost() {
                                         <li>source file</li>
                                         <li>3D images</li>
                                     </ul>
-                                    <button type="button" id="continueBtn" className="btn btn-primary d-block mx-auto">Continue</button>
+                                    <button type="button" id="continueBtn" className="btn btn-primary d-block mx-auto" height="50px" width="50px">Continue</button>
                                 </div>
                             </div>
                         </div>
