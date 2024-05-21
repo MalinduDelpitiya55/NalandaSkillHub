@@ -143,7 +143,7 @@ const ReviewPage = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '40px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#FFFFFF' }}>
+    <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', marginLeft: '20px', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#FFFFFF' }}>
       <div style={styles.container}>
         <div style={styles.chart}>
           {[5, 4, 3, 2, 1].map((rating) => (
