@@ -43,7 +43,6 @@ export default function App() {
         <Route path="/test" element={<Test />} />
         <Route path="/Profileedit" element={<ProfileEdit />} />
         <Route path="/adminusertable" element={<Usertable />} />
-        <Route path="/test" element={<Test />} />
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
       </Routes>
