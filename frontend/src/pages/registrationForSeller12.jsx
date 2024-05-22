@@ -1,12 +1,20 @@
 // eslint-disable-next-line no-unused-vars
 // import React from 'react'
 import RegistrationForm from "../components/registrationForSeller12";
-
-
-export default function buyerSignup() {
+import Navbar from "./../components/navbar";
+import Footer from "./../components/footer";
+export default function sellerSignup() {
   return (
     <div>
-      <RegistrationForm />
+      <header>
+        <Navbar />
+      </header>
+      <div className="p-5">
+        <RegistrationForm />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

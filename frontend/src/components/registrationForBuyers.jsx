@@ -50,7 +50,7 @@ export default function BuyersRegistration() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/buyerRegistration", {
+      const res = await axios.post("http://localhost:5001/buyerRegistration", {
         name,
         email,
         password,

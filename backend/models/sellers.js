@@ -1,23 +1,25 @@
+// models/sellerModel.js
+
 import mongoose from 'mongoose';
 
-const { Schema } = mongoose;
-
-const sellerSchema = new Schema({
-    fname: String,
-    mname: String,
-    lname: String,
-    uname: String,
-    email: String,
-    phoneNumber: String,
-    dob: Date,
-    gender: String,
-    password: String,
-    confirmPassword: String,
-    country: String,
-    timezone: String,
-    description: String,
-    skills: [String],
-    profilePicture: String
+const sellerSchema = new mongoose.Schema({
+    fname: { type: String  },
+    lname: { type: String },
+    uname: { type: String },
+    email: { type: String },
+    phoneNumber: { type: String},
+    dob: { type: Date},
+    gender: { type: String },
+    password: { type: String },
+    country: { type: String},
+    timezone: { type: String },
+    description: { type: String, required: false },
+    skills: { type: [String], required: false },
+    role: {
+        type: String,
+        default: "seller",
+        enum: ["buyer", "seller"] // Ensure role is either buyer or seller
+    }
 });
 
 const Seller = mongoose.model('Seller', sellerSchema);

@@ -1,100 +1,76 @@
-import React, {Component} from "react";
+import  {useState, useRef, useEffect} from "react";
 
-class InputSkill extends Component {
-  constructor(props) {
-    super(props);
+const InputSkill = () => {
+  const [skills, setSkills] = useState(() => {
+    // Initialize state from localStorage if available
+    const savedSkills = localStorage.getItem("skills");
+    return savedSkills ? JSON.parse(savedSkills) : [];
+  });
+  const [newSkill, setNewSkill] = useState("");
+  const inputRef = useRef();
 
-    this.state = {
-      skills: [],
-      newSkill: "", // New skill input
-    };
-    this.inputRef = React.createRef();
-  }
-  
+  useEffect(() => {
+    // Update local storage whenever skills change
+    localStorage.setItem("skills", JSON.stringify(skills));
+  }, [skills]);
 
-  // remove skill
-  removeSkill = (i) => {
-    const skills = this.state.skills;
-    skills.splice(i, 1);
-    this.setState({
-      skills: skills,
-    });
+  const removeSkill = (index) => {
+    const updatedSkills = skills.filter((_, i) => i !== index);
+    setSkills(updatedSkills);
   };
 
-  // add skill
-  addSkill = (e) => {
-    const skills = this.state.skills;
+  const addSkill = (e) => {
     const value = e.target.value;
     if (e.key === "Enter" && value) {
-      // check if duplicate skill
       if (skills.find((skill) => skill.toLowerCase() === value.toLowerCase())) {
-        return alert("No duplicate value allowed");
+        alert("No duplicate value allowed");
+      } else {
+        const updatedSkills = [...skills, value];
+        setSkills(updatedSkills);
+        setNewSkill("");
       }
-      // else add skill to skills array
-      skills.push(value);
-      // set new state
-      this.setState({
-        skills,
-        newSkill: "", // Clear the input field
-      });
     } else if (e.key === "Backspace" && !value) {
-      // if no value and hit backspace, remove previous skill
-      this.removeSkill(skills.length - 1);
+      removeSkill(skills.length - 1);
     }
   };
 
-  // handle input change
-  handleInputChange = (e) => {
-    this.setState({
-      newSkill: e.target.value,
-    });
+  const handleInputChange = (e) => {
+    setNewSkill(e.target.value);
   };
 
-  render() {
-    const {skills, newSkill} = this.state;
-    return (
-      <>
-        <div className="skill ">
-          <ul>
-            <div className="input-skill ">
-              <div className="d-flex flex-row">
-                
-                <div className="col-6">
-                  <input
-                    onKeyDown={this.addSkill}
-                    type="text"
-                    size="4"
-                    className="form-control mt-5"
-                    ref={this.inputRef}
-                    value={newSkill} // Bind input value
-                    onChange={this.handleInputChange} // Handle input change
-                  />
-                </div>
-              </div>
+  return (
+    <div className="skill">
+      <ul>
+        <div className="input-skill">
+          <div className="d-flex flex-row">
+            <div className="col-6">
+              <input
+                onKeyDown={addSkill}
+                type="text"
+                size="4"
+                className="form-control mt-5"
+                ref={inputRef}
+                value={newSkill}
+                onChange={handleInputChange}
+              />
             </div>
-            <div className="d-flex flex-row">
-             
-              <div className="">
-                {skills.map((skill, i) => {
-                  return (
-                    <div className="btn bg-info-subtle rounded-5 mt-4" key={i}>
-                      {skill}
-                      <button
-                        className="btn"
-                        onClick={() => this.removeSkill(i)}
-                      >
-                        x
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </ul>
+          </div>
         </div>
-      </>
-    );
-  }
-}
+        <div className="d-flex flex-row">
+          <div>
+            {skills.map((skill, i) => (
+              <div className="btn bg-info-subtle rounded-5 mt-4" key={i}>
+                {skill}
+                <button className="btn" onClick={() => removeSkill(i)}>
+                  x
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </ul>
+    </div>
+  );
+};
 
 export default InputSkill;

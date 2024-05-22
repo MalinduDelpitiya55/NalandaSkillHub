@@ -11,6 +11,7 @@ import OneJobPost from "./pages/oneJob";
 import Profile from "./pages/profile";
 import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
+import Dashboard from "./pages/dashboard";
 import Test from "./components/test";
 import Rating from "./pages/ratingForm";
 import Review from "./pages/reviewDisplay";
@@ -23,17 +24,21 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        
         <Route path="/" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/buyerRegistration" element={<BuyersRegistration />} />
         <Route path="/sellerRegistration" element={<SellerRegistration />} />
-        <Route path="/sellerRegistration12" element={<SellerRegistration12 />} />
+        <Route
+          path="/sellerRegistration12"
+          element={<SellerRegistration12 />}
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/jobpost" element={<Job />} />
         <Route path="/onejobpost" element={<OneJobPost />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/test" element={<Test />} />
         <Route path="/test" element={<Test />} />
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />

@@ -1,8 +1,12 @@
 
+//import React from "react";
+import "./js/nav.js";
+
+
 import './js/nav.js';
 import Logo from "./../assets/images/home/logo.png";
 import Logo1 from "./../assets/images/home/logo1.png";
-
+import {Link} from "react-router-dom";
 function Navbars() {
   return (
     <>
@@ -156,13 +160,16 @@ function Navbars() {
               className="nav-logo col-sm col-8 mx-auto mx-sm-0 text-sm-start text-center my-auto"
             >
               <div style={{width: "fit-content"}} className="mx-auto mx-sm-0">
-                <img
-                  className="nav-logo-white d-block"
-                  src={Logo}
-                  width="170"
-                  height="33"
-                  alt="proconnect"
-                />
+
+                <Link to="/" type="submit">
+                  <img
+                    className="nav-logo-white d-block"
+                    src={Logo}
+                    width="170"
+                    height="33"
+                    alt="proconnect"
+                  />
+                </Link>
                 <img
                   className="nav-logo-black d-none"
                   src={Logo1}
@@ -191,8 +198,7 @@ function Navbars() {
             >
               Sign In
             </a>
-            <a
-              href="/user"
+            <a href="/user"
               className="join-btn col-auto my-auto text-white text-end fs-6 px-3 py-1 fw-semibold border border-1 border-white rounded-2"
             >
               Join

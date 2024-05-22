@@ -21,7 +21,7 @@ import { useState} from "react";
     };
 
     return (
-      <div className="container mt-5">
+      <div className="container mt-5 vh-100">
         <div className="text-center mt-5">
           <h1>Join as a client or Freelancer</h1>
         </div>
@@ -89,7 +89,7 @@ import { useState} from "react";
               </button>
             </div>
             <div className="col-lg-12 text-center mt-4">
-              <p>
+              <p className="text-dark">
                 Already have an account? <a href="#">Log In</a>
               </p>
             </div>
