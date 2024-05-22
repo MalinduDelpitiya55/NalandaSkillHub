@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, {Component} from "react";
-import "./css/signin-seller.css";
-=======
 import  {useState, useRef, useEffect} from "react";
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
 
 const InputSkill = () => {
   const [skills, setSkills] = useState(() => {
@@ -43,29 +38,6 @@ const InputSkill = () => {
     setNewSkill(e.target.value);
   };
 
-<<<<<<< HEAD
-  render() {
-    const {skills, newSkill} = this.state;
-    return (
-      <>
-        <div className="skill ">
-          <ul>
-            <div className="input-skill ">
-              <div className="d-flex flex-row">
-                
-                <div className="col-6">
-                  <input
-                    onKeyDown={this.addSkill}
-                    type="text"
-                    size="4"
-                    className="input5 form-control mt-5"
-                    ref={this.inputRef}
-                    value={newSkill} // Bind input value
-                    onChange={this.handleInputChange} // Handle input change
-                  />
-                </div>
-              </div>
-=======
   return (
     <div className="skill">
       <ul>
@@ -81,7 +53,6 @@ const InputSkill = () => {
                 value={newSkill}
                 onChange={handleInputChange}
               />
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
             </div>
           </div>
         </div>

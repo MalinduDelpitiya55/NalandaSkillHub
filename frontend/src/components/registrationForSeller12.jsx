@@ -147,7 +147,6 @@ function MultiStepForm() {
     switch (step) {
       case 1:
         return (
-<<<<<<< HEAD
           <div className="bodyreg row vh-100" >
             <div
               className="col-lg-6 col-xl-6  p-5">
@@ -157,25 +156,12 @@ function MultiStepForm() {
                 <div className=" mx-3 ">
                   <h2 className="step1">Step 1</h2>
                   <div className="row mx-5  mt-5">
-=======
-          <div className="row p-5" style={{backgroundColor: "#ecf8ff"}}>
-            <div className="col-lg-5 col-xl-5 p-5" id="Signin-Background"></div>
-            <div className="col-lg-7 col-xl-7 col-md-12">
-              <div className="card p-2" style={{backgroundColor: "#ecf8ff"}}>
-                <div className="mx-3">
-                  <h2>Step 1</h2>
-                  <div className="row mx-5 mt-5">
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-0">
                       <input
                         type="text"
                         id="fname"
                         name="fname"
-<<<<<<< HEAD
-                        className="input1 col-12"
-=======
-                        className="form-control col-12"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
+                        className="input1  col-12"
                         value={formData.fname}
                         onChange={handleChange}
                         placeholder="First Name"
@@ -186,11 +172,7 @@ function MultiStepForm() {
                         type="text"
                         id="lname"
                         name="lname"
-<<<<<<< HEAD
                         className="input1 col-12"
-=======
-                        className="form-control col-12"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                         value={formData.lname}
                         onChange={handleChange}
                         placeholder="Last Name"
@@ -203,11 +185,7 @@ function MultiStepForm() {
                         type="email"
                         id="email"
                         name="email"
-<<<<<<< HEAD
                         className="input1 col-12"
-=======
-                        className="form-control col-12"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
@@ -231,11 +209,7 @@ function MultiStepForm() {
                         <div className="input-group">
                           <input
                             type={showPassword1 ? "text" : "password"}
-<<<<<<< HEAD
                             className="input1 form-control "
-=======
-                            className="form-control"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                             id="password"
                             name="password"
                             onChange={handleChange}
@@ -282,21 +256,13 @@ function MultiStepForm() {
                   <div className="row mt-lg-5 mt-md-4 mt-sm-4 mx-5">
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4">
                       <div className="col-12 d-flex flex-row">
-<<<<<<< HEAD
                         <label className="lbbirthday" htmlFor="dob">Birthday : </label>
 
-=======
-                        <label htmlFor="dob">Birthday :</label>
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                         <input
                           type="date"
                           id="dob"
                           name="dob"
-<<<<<<< HEAD
                           className="input2 flex-fill"
-=======
-                          className="form-control flex-fill"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                           value={formData.dob}
                           onChange={handleChange}
                         />
@@ -305,11 +271,7 @@ function MultiStepForm() {
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4 mt-sm-4">
                       <div className="col-12 d-flex flex-row">
                         <select
-<<<<<<< HEAD
                           className="input3 form-select form-select-sm"
-=======
-                          className="form-select form-select-sm form-control"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                           aria-label="Default select example"
                           value={formData.gender}
                           onChange={handleChange}
@@ -331,11 +293,7 @@ function MultiStepForm() {
                         type="text"
                         id="country"
                         name="country"
-<<<<<<< HEAD
                         className="input1 col-12"
-=======
-                        className="col-12 form-control"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                         value={formData.country}
                         onChange={handleChange}
                         placeholder="Country"
@@ -346,11 +304,7 @@ function MultiStepForm() {
                         type="text"
                         id="timezone"
                         name="timezone"
-<<<<<<< HEAD
                         className="input1 col-12"
-=======
-                        className="form-control col-12"
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                         value={formData.timezone}
                         onChange={handleChange}
                         placeholder="Timezone"
@@ -379,7 +333,6 @@ function MultiStepForm() {
         );
       case 2:
         return (
-<<<<<<< HEAD
           <div className="bodyreg row -5" style={{backgroundColor: "#ecf8ff"}}>
             <div
               className="col-lg-6 col-xl-6  p-5"
@@ -395,19 +348,6 @@ function MultiStepForm() {
                       <td className="step2lb col">Profile Picture</td>
                       <td className="text-center col-6 align-items-center  ">
                         <div className="profile-picture ">
-=======
-          <div className="row -5 p-5" style={{backgroundColor: "#ecf8ff"}}>
-            <div className="col-lg-6 col-xl-6 p-5" id="Signin-Background"></div>
-            <div className="col-lg-6 col-xl-6 col-md-12">
-              <div className="card p-4" style={{backgroundColor: "#ecf8ff"}}>
-                <div>
-                  <h2>Step 2</h2>
-                  <table className="mx-5">
-                    <tr>
-                      <td className="col">Profile Picture</td>
-                      <td className="text-center col-6 align-items-center">
-                        <div className="profile-picture">
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                           {file ? (
                             <img
                               src={URL.createObjectURL(file)}
@@ -456,13 +396,8 @@ function MultiStepForm() {
                       </td>
                     </tr>
                     <tr className="col-7">
-<<<<<<< HEAD
                       <td className=" col-1">
                         <label htmlFor="email" className="step2lb mt-5">
-=======
-                      <td className="col-1">
-                        <label htmlFor="email" className="mt-5">
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                           Description:
                         </label>
                       </td>
@@ -476,16 +411,10 @@ function MultiStepForm() {
                         />
                       </td>
                     </tr>
-<<<<<<< HEAD
 
                     <tr className="col-8 ">
                       <td className="col-1 align-items-start ">
                         <label htmlFor="Tagify" className="step2lb mt-5">
-=======
-                    <tr className="col-8">
-                      <td className="col-1 align-items-start">
-                        <label htmlFor="Tagify" className="mt-5">
->>>>>>> 1f37a2b6bd458d4d7161dd11166b7276ca5390b9
                           Add your Skills:
                         </label>
                       </td>
