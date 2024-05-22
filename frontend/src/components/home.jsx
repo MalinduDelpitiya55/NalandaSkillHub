@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 import {useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-=======
 
-import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> 40e0a3ed11c29fdaf899e71e2fb1d56e7ce53d2c
 // import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./js/content.js";
 import "./css/home.css";
@@ -19,11 +16,8 @@ import Business from "./../assets/images/home/business.png";
 import Qualities from "./../assets/images/home/qualities.png";
 import Tick from "./../assets/images/home/tick.svg";
 import Logo from "./../assets/images/home/logo.png";
-<<<<<<< HEAD
 //import Logo1 from "./../assets/images/home/logo1.png";
-=======
 import Job from "../pages/jobPost.jsx";
->>>>>>> 40e0a3ed11c29fdaf899e71e2fb1d56e7ce53d2c
 
 const Home = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -487,13 +481,8 @@ const Home = () => {
                       </span>
                     </div>
                     <p className="text-muted" style={{fontSize: "1.2rem"}}>
-<<<<<<< HEAD
                       Always know what you&apos;ll pay upfront. Your payment
                       isn&apos;t released until you approve the work.
-=======
-                      Always know what you`&apos;`ll pay upfront. Your payment
-                      isn`&apos;`t released until you approve the work.
->>>>>>> 40e0a3ed11c29fdaf899e71e2fb1d56e7ce53d2c
                     </p>
                   </li>
                   <li>
@@ -532,10 +521,7 @@ const Home = () => {
             <h1 className="mt-5" style={{fontSize: "2.1rem"}}>
               Explore the marketplace
             </h1>
-<<<<<<< HEAD
-=======
             <Job />
->>>>>>> 40e0a3ed11c29fdaf899e71e2fb1d56e7ce53d2c
           </section>
           {/* proconnect business */}
           <section
@@ -598,10 +584,7 @@ const Home = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
-=======
-  }
->>>>>>> 40e0a3ed11c29fdaf899e71e2fb1d56e7ce53d2c
+  
 
 export default Home;
