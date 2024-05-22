@@ -9,6 +9,8 @@ import Home from "./pages/home";
 import Job from "./pages/jobPost";
 import OneJobPost from "./pages/oneJob";
 import Profile from "./pages/profile";
+import ProfileEdit from "./pages/profileEdit";
+import Usertable from "./components/usertable";
 import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
 import Dashboard from "./pages/dashboard";
@@ -39,10 +41,10 @@ export default function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/Profileedit" element={<ProfileEdit />} />
+        <Route path="/adminusertable" element={<Usertable />} />
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
-
       </Routes>
     </Router>
   );
