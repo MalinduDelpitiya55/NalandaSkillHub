@@ -58,7 +58,6 @@ import routes from './routes/route.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/dbConfig.js';
-import errorHandlers from './middleware/errorHandler';
 
 dotenv.config();
 connectDB();
@@ -68,8 +67,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); // Add this line to handle URL-encoded data
-app.use(errorHandlers);
+app.use(bodyParser.urlencoded({ extended: true })); // Add this line to handle URL-encoded data 
 
 // Use the routes
 app.use('/', routes);
