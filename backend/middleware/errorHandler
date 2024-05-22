@@ -1,0 +1,43 @@
+import { constants } from "../constants.js";
+
+export default function (err, req, res, next) {
+    const statusCode = res.statusCode ? res.statusCode : 500;
+
+    let response = {
+        title: "Error",
+        message: err.message,
+    };
+
+    if (process.env.NODE_ENV === 'development') {
+        response.stackTrace = err.stack;
+    }
+
+    switch (statusCode) {
+        case constants.VALIDATION_ERROR:
+            response.title = "Bad Request";
+            res.status(400);
+            break;
+        case constants.UNAUTHORIZED:
+            response.title = "Unauthorized";
+            res.status(401);
+            break;
+        case constants.FORBIDDEN:
+            response.title = "Forbidden";
+            res.status(403);
+            break;
+        case constants.NOT_FOUND:
+            response.title = "Not Found";
+            res.status(404);
+            break;
+        case constants.SERVER_ERROR:
+            response.title = "Server Error";
+            res.status(500);
+            break;
+        default:
+            res.status(statusCode);
+            break;
+    }
+
+    res.json(response);
+}
+
