@@ -8,6 +8,8 @@ import Login from "./pages/login";
 
 import Home from "./pages/home";
 import Profile from "./pages/profile";
+import ProfileEdit from "./pages/profileEdit";
+import Usertable from "./components/usertable";
 
 import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/Profileedit" element={<ProfileEdit />} />
+        <Route path="/adminusertable" element={<Usertable />} />
       </Routes>
     </Router>
   );

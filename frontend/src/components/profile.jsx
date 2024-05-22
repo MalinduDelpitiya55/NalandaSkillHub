@@ -9,6 +9,31 @@ const CVSection = () => {
       {/* CSS */}
       <style>
         {`
+
+          h3,h5{
+            font-weight: bold;
+
+          }
+
+          .editp{
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+          }
+
+          .sidec{
+              align-items: center;
+              justify-content: center;
+              width: 300px;
+              height: auto;
+              border-radius: 4px;
+              background-color: transparent
+              text-align: center;
+              margin: 20px;
+              padding: 20px;
+              transition: .3s;
+              box-shadow: 1px 10px 15px 8px rgba(0,0,0,0.6) ;
+          
+          }
+
           /* Color variables */
           :root {
             --white-color: #fff;
@@ -71,11 +96,12 @@ const CVSection = () => {
       </style>
 
       {/* HTML */}
+      <div className='editp'>
       <section className="container py-5" id="cv">
         <div className="row">
-          <div className="col-lg-4 mt-5 order-lg-0 order-1 text-center">
+          <div className="sidec col-lg-4 mt-5 order-lg-0 order-1 text-center">
             <img className="img-fluid rounded-circle border border-5 border-dark-subtle" src={Profilepic} alt="profile-img" />
-            <h2 className="mt-3">James Anderson</h2>
+            <h2 className="mt-3">Akash Hirumal</h2>
             <ul className="list-unstyled contact-info">
               
               <li>Logo Specialist and Graphic Designer</li>
@@ -97,7 +123,7 @@ const CVSection = () => {
               {/* Add or remove interests as needed */}
             </ul>
           </div>
-          <div className="col-lg-7 order-lg-1 order-0 mt-5 text-start">
+          <div className="col-lg-7 order-lg-1 order-0 mt-5 m-3 text-start">
             <h3>Profile</h3>
             <hr />
             <p>Write a brief description of yourself, your background, and your goals. Highlight your key strengths and experiences.</p>
@@ -153,6 +179,7 @@ const CVSection = () => {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }
