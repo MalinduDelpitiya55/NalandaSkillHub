@@ -58,7 +58,7 @@ import routes from './routes/route.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/dbConfig.js';
-import { errorHandlers } from './middleware/errorHandler';
+import errorHandlers from './middleware/errorHandler';
 
 dotenv.config();
 connectDB();
