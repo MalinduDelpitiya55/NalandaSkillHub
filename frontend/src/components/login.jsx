@@ -57,12 +57,12 @@ function SignInForm() {
 
   return (
     <div className="container align-items-center ">
-      <div className="row col-12">
-        <div className="col-5 m-5 ">
+      <div className="row col-12 mt-4">
+        <div className="col-5 m-4 ">
           <img src={SigninIMG} alt="Image note found" width="80%" />
         </div>
 
-        <div className="col-5 m-5">
+        <div className="col-5 m-4">
           <section className="vh-80 gradient-custom">
             <div className="container  h-100">
               <div className="row d-flex justify-content-center align-items-center h-100">
