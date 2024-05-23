@@ -1,13 +1,11 @@
 
 import {useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// import 'bootstrap-icons/font/bootstrap-icons.css';
-import "./js/content.js";
-import "./css/home.css";
-import axios from "axios";
-import Slideimg from "./slider.jsx";
 import {useNavigate} from "react-router-dom";
+// import 'bootstrap-icons/font/bootstrap-icons.css';
+import './js/content.js';
+ import './css/home.css';
+ import Slideimg from './slider.jsx'
 //  import Explore from './explore.jsx'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -424,10 +422,9 @@ const Home = () => {
         </header>
         <main>
           {/* Popular Services */}
+          <center><h2 className='popularservices'>Popular Services</h2></center>
 
-          <div id="Services">
-            <Slideimg />
-          </div>
+          <div id="Services"><Slideimg/></div>
 
           {/* Our Qualities */}
           <section
@@ -517,12 +514,11 @@ const Home = () => {
           </section>
           {/* Explore */}
 
+      
           <section className="explore py-5 px-3 px-sm-4 px-md-5" id="explore">
-            <h1 className="mt-5" style={{fontSize: "2.1rem"}}>
-              Explore the marketplace
-            </h1>
-            <Job />
+            <h1 className="mt-5" style={{fontSize: '2.1rem'}}>Explore the marketplace</h1>
           </section>
+          
           {/* proconnect business */}
           <section
             className="fvr-busns py-5 px-3 px-sm-4 px-md-5 text-white"
