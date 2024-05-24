@@ -3,7 +3,7 @@ import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom"; // Import useNavigate
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import SigninIMG from "./../assets/images/signinIMG.jpg";
 
 function SignInForm() {
@@ -34,11 +34,10 @@ function SignInForm() {
     }
 
     try {
-      const res = await axios.post("connect-pro-omega.vercel.app/login", {
+      const res = await axios.post("http://localhost:3306/login", {
         email,
         password,
-      });
-      console.log(res);
+      });console.log(res);
       if (res.status === 200) {
         const token = res.data.accessToken;
         console.log(token);
@@ -177,10 +176,14 @@ function SignInForm() {
               </div>
             </div>
           </section>
+          ;
         </div>
       </div>
     </div>
+
   );
 }
 
 export default SignInForm;
+
+

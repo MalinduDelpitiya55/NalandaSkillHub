@@ -15,7 +15,8 @@ import Qualities from "./../assets/images/home/qualities.png";
 import Tick from "./../assets/images/home/tick.svg";
 import Logo from "./../assets/images/home/logo.png";
 //import Logo1 from "./../assets/images/home/logo1.png";
-import Job from "../pages/jobPost.jsx";
+//import Job from "../pages/jobPost.jsx";
+import axios from 'axios';
 
 const Home = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -29,7 +30,7 @@ const Home = () => {
           throw new Error("No token found");
         }
 
-        const response = await axios.get("http://localhost:5001", {
+        const response = await axios.get("http://localhost:3306/home", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -52,7 +53,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!isLoggedIn) {
-      navigate("/login");
+      // navigate("/login");
     }
   }, [isLoggedIn, navigate]);
 

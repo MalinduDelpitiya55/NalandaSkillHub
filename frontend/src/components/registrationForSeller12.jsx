@@ -94,7 +94,7 @@ function MultiStepForm() {
     // Send formData to backend for processing
     try {
       const response = await axios.post(
-        "http://localhost:5001/sellerRegistration12",
+        "http://localhost:3306/register/sellerRegistration12",
         formDataToSubmit,
         {
           headers: {
