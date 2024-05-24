@@ -34,11 +34,14 @@ function SignInForm() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("http://localhost:3306/login", {
         email,
         password,
-      });
+      });console.log(res);
       if (res.status === 200) {
+        const token = res.data.accessToken;
+        console.log(token);
+        localStorage.setItem("accessToken", token);
         navigate("/"); // Navigate to /home
       }
     } catch (error) {
@@ -53,12 +56,12 @@ function SignInForm() {
 
   return (
     <div className="container align-items-center ">
-      <div className="row col-12">
-        <div className="col-5 m-5 ">
+      <div className="row col-12 mt-4">
+        <div className="col-5 m-4 ">
           <img src={SigninIMG} alt="Image note found" width="80%" />
         </div>
 
-        <div className="col-5 m-5">
+        <div className="col-5 m-4">
           <section className="vh-80 gradient-custom">
             <div className="container  h-100">
               <div className="row d-flex justify-content-center align-items-center h-100">
@@ -87,6 +90,7 @@ function SignInForm() {
                               type="email"
                               className="form-control"
                               id="email"
+                              //pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
                               ref={emailRef}
                               required
                             />
@@ -176,6 +180,7 @@ function SignInForm() {
         </div>
       </div>
     </div>
+
   );
 }
 

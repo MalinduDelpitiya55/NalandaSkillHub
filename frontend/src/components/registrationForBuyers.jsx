@@ -50,11 +50,14 @@ export default function BuyersRegistration() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/buyerRegistration", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "http://localhost:3306/register/user",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       if (res.status === 201) {
         alert("Account created successfully");
         navigate("/login");

@@ -1,12 +1,13 @@
-// eslint-disable-next-line no-unused-vars
-// import React from 'react'
-import RegistrationForm from "./../components/registrationForSeller";
 
 
-export default function buyerSignup() {
+import MultiStepForm from "../components/multiForm/MultiStepForm.jsx";
+
+function App() {
   return (
-    <div>
-      <RegistrationForm />
+    <div className="App">
+      <MultiStepForm />
     </div>
   );
 }
+
+export default App;

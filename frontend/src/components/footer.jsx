@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Logo from "./../assets/images/home/logo.png";
 
 function Footer() {
@@ -21,35 +21,7 @@ function Footer() {
               font-family: "Roboto", sans-serif !important;
             }
             
-            /* Navbar */
-            
-            .hedertitle li{
-              padding-right: 40px;
-            }
-            
-            ul {
-              list-style: none;
-              padding: 0 !important;
-            }
-            
-            a:link {
-              text-decoration: none;
-            }
-            
-            #top-nav {
-              z-index: 0;
-            }
-            
-            nav ul > li {
-              cursor: pointer;
-              
-            }
-            
-            nav {
-              z-index: 10 !important;
-              background-color: #0b014c;
-            }
-            
+          
             
             
             /* Footer */
@@ -76,7 +48,7 @@ function Footer() {
               border-radius: 10px;
             }
 
-            .text-center{
+            .barnd{
               color: white;
             }
         `}
@@ -124,7 +96,7 @@ function Footer() {
       <div className="footer-rights-wrapper py-3 my-auto border-top border-1 border-opacity-10 d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
         <div className="footer-rights d-flex flex-column flex-md-row justify-content-center align-items-center" style={{ gap: '18px' }}>
           <img src={Logo} width="130" height="27" alt="proconnect" />
-          <div className="text-center align-middle my-auto">© ProConnect IUHS Nalanda Campus. 2024</div>
+          <div className="barnd text-center align-middle my-auto">© ProConnect IUHS Nalanda Campus. 2024</div>
         </div>
         <div className="footer-social d-flex flex-column flex-md-row justify-content-center align-items-center" style={{ columnGap: '15px' }}>
           <ul className="d-flex align-items-center my-auto">

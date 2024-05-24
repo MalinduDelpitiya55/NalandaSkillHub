@@ -2,12 +2,20 @@
 import React from "react";
 
 import User from "./../components/sellerOrBuyer";
-
-
-export default function login() {
+import Navbar from "./../components/navbar";
+import Footer from "./../components/footer";
+export default function user() {
   return (
     <div>
-      <User />
+      <header>
+        <Navbar />
+      </header>
+      <div className="mt-5">
+        <User />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
