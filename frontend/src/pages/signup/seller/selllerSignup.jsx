@@ -1,6 +1,6 @@
 
 
-import MultiStepForm from "../components/multiForm/MultiStepForm.jsx";
+import MultiStepForm from "../../../components/multiForm/MultiStepForm";
 
 function App() {
   return (

@@ -3,17 +3,17 @@ import {useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useNavigate} from "react-router-dom";
 // import 'bootstrap-icons/font/bootstrap-icons.css';
-import './js/content.js';
- import './css/home.css';
+import './../js/content.js';
+ import './../css/home.css';
  import Slideimg from './slider.jsx'
 //  import Explore from './explore.jsx'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Business from "./../assets/images/home/business.png";
-import Qualities from "./../assets/images/home/qualities.png";
-import Tick from "./../assets/images/home/tick.svg";
-import Logo from "./../assets/images/home/logo.png";
+import Business from "./../../assets/images/home/business.png";
+import Qualities from "./../../assets/images/home/qualities.png";
+import Tick from "./../../assets/images/home/tick.svg";
+import Logo from "./../../assets/images/home/logo.png";
 //import Logo1 from "./../assets/images/home/logo1.png";
 //import Job from "../pages/jobPost.jsx";
 import axios from 'axios';
