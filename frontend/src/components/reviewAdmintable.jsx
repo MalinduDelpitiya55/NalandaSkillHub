@@ -50,12 +50,14 @@ export default function CustomizedTables() {
   };
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
+    const newValue = parseInt(event.target.value, 10);
+    setRowsPerPage(newValue);
     setPage(0);
   };
 
-  const emptyRows = 
-    rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  // Calculate the rows to display based on the current page and rowsPerPage
+  const displayRows = rowsPerPage === -1 ? rows : rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+  const emptyRows = rowsPerPage === -1 ? 0 : rowsPerPage - displayRows.length;
 
   return (
     <TableContainer component={Paper}>
@@ -71,7 +73,7 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
+          {displayRows.map((row) => (
             <StyledTableRow key={row.id}>
               <StyledTableCell component="th" scope="row">
                 {row.id}
@@ -91,7 +93,7 @@ export default function CustomizedTables() {
         </TableBody>
       </Table>
       <TablePagination
-        rowsPerPageOptions={[10, 50]}
+        rowsPerPageOptions={[10, 50, { value: -1, label: 'All' }]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
