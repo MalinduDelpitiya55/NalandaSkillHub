@@ -33,13 +33,104 @@ function RequirementForm() {
                             <option value="wordpress_developer">Portraits & Caricatures</option>
                         </select>
                         <label htmlFor="package">Packages:</label>
+                           
 
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '530px', margin: '0', backgroundColor: '#f0f2f5' }}>
+            <div style={{ display: 'flex', gap: '20px' }}>
+                <div style={styles.card}>
+                    <div style={styles.cardHeader}>
+                        <h2>Basic</h2>
+                    </div>
+                    <div style={styles.cardContent}>
+                        <h3 style={styles.cardTitle}>BASIC PROMO</h3>
+                        <label htmlFor="priceBasic">Price:</label>
+                        <input type="text" id="priceBasic" /><br /><br />
+                        <label htmlFor="deliveryTimeBasic">Delivery Time:</label>
+                        <select id="deliveryTimeBasic" name="deliveryTime">
+                            <option value="day1">1 Days Delivery</option>
+                            <option value="day2">2 Days Delivery</option>
+                            <option value="day3">3 Days Delivery</option>
+                            <option value="day4">4 Days Delivery</option>
+                            <option value="day5">5 Days Delivery</option>
+                        </select><br /><br />
+                        <label htmlFor="revisionsBasic">Revisions:</label>
+                        <select id="revisionsBasic" name="revisions">
+                            <option value="day1">1</option>
+                            <option value="day2">2</option>
+                            <option value="day3">3</option>
+                            <option value="day4">4</option>
+                            <option value="day5">5</option>
+                        </select><br /><br />
+                        <label htmlFor="detailsBasic">Describe the details of your offering:</label>
+                        <textarea id="detailsBasic"></textarea><br /><br />
+                        <button type="submit" style={styles.cardButton}>Basic</button>
+                    </div>
+                </div>
 
-                        <div>
-                            <PromoPackage/>
-                        </div>
+                <div style={styles.card}>
+                    <div style={styles.cardHeader}>
+                        <h2>Standard</h2>
+                    </div>
+                    <div style={styles.cardContent}>
+                        <h3 style={styles.cardTitle}>STANDARD PROMO</h3>
+                        <label htmlFor="priceStandard">Price:</label>
+                        <input type="text" id="priceStandard" /><br /><br />
+                        <label htmlFor="deliveryTimeStandard">Delivery Time:</label>
+                        <select id="deliveryTimeStandard" name="deliveryTime">
+                            <option value="day1">1 Days Delivery</option>
+                            <option value="day2">2 Days Delivery</option>
+                            <option value="day3">3 Days Delivery</option>
+                            <option value="day4">4 Days Delivery</option>
+                            <option value="day5">5 Days Delivery</option>
+                        </select><br /><br />
+                        <label htmlFor="revisionsStandard">Revisions:</label>
+                        <select id="revisionsStandard" name="revisions">
+                            <option value="day1">1</option>
+                            <option value="day2">2</option>
+                            <option value="day3">3</option>
+                            <option value="day4">4</option>
+                            <option value="day5">5</option>
+                        </select><br /><br />
+                        <label htmlFor="detailsStandard">Describe the details of your offering:</label>
+                        <textarea id="detailsStandard"></textarea><br /><br />
+                        <button type="submit" style={styles.cardButton}>Standard</button>
+                    </div>
+                </div>
 
-                        <br /><br />
+                <div style={styles.card}>
+                    <div style={styles.cardHeader}>
+                        <h2>Premium</h2>
+                    </div>
+                    <div style={styles.cardContent}>
+                        <h3 style={styles.cardTitle}>PREMIUM PROMO</h3>
+                        <label htmlFor="pricePremium">Price:</label>
+                        <input type="text" id="pricePremium" /><br /><br />
+                        <label htmlFor="deliveryTimePremium">Delivery Time:</label>
+                        <select id="deliveryTimePremium" name="deliveryTime">
+                            <option value="day1">1 Days Delivery</option>
+                            <option value="day2">2 Days Delivery</option>
+                            <option value="day3">3 Days Delivery</option>
+                            <option value="day4">4 Days Delivery</option>
+                            <option value="day5">5 Days Delivery</option>
+                        </select><br /><br />
+                        <label htmlFor="revisionsPremium">Revisions:</label>
+                        <select id="revisionsPremium" name="revisions">
+                            <option value="day1">1</option>
+                            <option value="day2">2</option>
+                            <option value="day3">3</option>
+                            <option value="day4">4</option>
+                            <option value="day5">5</option>
+                        </select><br /><br />
+                        <label htmlFor="detailsPremium">Describe the details of your offering:</label>
+                        <textarea id="detailsPremium"></textarea><br /><br />
+                        <button type="submit" style={styles.cardButton}>Premium</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+                        
                     </fieldset>
 
                     <button type="submit" style={buttonStyle}>Submit</button>
@@ -76,6 +167,40 @@ const buttonStyle = {
     borderWidth: '1px 1px 3px',
     boxShadow: '0 -1px 0 rgba(255, 255, 255, 0.1) inset',
     marginBottom: '10px',
+    marginTop:'20px'
+};
+const styles = {
+    card: {
+        backgroundColor: '#e0e8ff',
+        borderRadius: '10px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        width: '230px',
+        textAlign: 'left',
+        overflow: 'hidden'
+    },
+    cardHeader: {
+        backgroundColor: '#b0c4ff',
+        padding: '10px 0',
+        textAlign: 'center'
+    },
+    cardContent: {
+        padding: '20px'
+    },
+    cardTitle: {
+        marginLeft: '-15px',
+        fontSize: '15px',
+        color: '#333'
+    },
+    cardButton :{
+        backgroundColor: '#007bff',
+        color: 'white',
+        border: 'none',
+        padding: '10px 20px',
+        fontSize: '16px',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        marginLeft: '50px'
+    }
 };
 
 export default RequirementForm;
