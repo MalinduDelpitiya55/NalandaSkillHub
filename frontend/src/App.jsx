@@ -15,14 +15,10 @@ import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
 import Dashboard from "./pages/dashboard";
 import Test from "./components/test";
-<<<<<<< HEAD
 import AdminRequirement from "./pages/adminJobRequ";
-
-=======
 import Rating from "./pages/ratingForm";
 import Review from "./pages/reviewDisplay";
 import ActiveOrders from "./pages/activeOrder";
->>>>>>> de56230ecb172de3e3738ea9bbbb26cf142d5479
 
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -48,16 +44,12 @@ export default function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/test" element={<Test />} />
-<<<<<<< HEAD
         <Route path="/adminJobRequ" element={<AdminRequirement />} />
-=======
         <Route path="/Profileedit" element={<ProfileEdit />} />
         <Route path="/adminusertable" element={<Usertable />} />
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
         <Route path="/activeorders" element={<ActiveOrders />} />
->>>>>>> de56230ecb172de3e3738ea9bbbb26cf142d5479
-
       </Routes>
     </Router>
   );
