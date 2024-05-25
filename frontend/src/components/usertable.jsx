@@ -1,9 +1,5 @@
 
-
-
-
-import React from 'react';
-import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import {MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 
 const data = [
   {
@@ -12,7 +8,6 @@ const data = [
     email: 'john.doe@gmail.com',
     imgSrc: 'https://mdbootstrap.com/img/new/avatars/8.jpg',
     title: 'Software engineer',
-    statusColor: 'success',
   },
   {
     sellerid: '220100002',
@@ -20,7 +15,6 @@ const data = [
     email: 'alex.ray@gmail.com',
     imgSrc: 'https://mdbootstrap.com/img/new/avatars/6.jpg',
     title: 'Consultant',
-    statusColor: 'primary',
   },
   {
     sellerid: '220100003',
@@ -28,13 +22,71 @@ const data = [
     email: 'kate.hunington@gmail.com',
     imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
     title: 'Designer',
-    statusColor: 'warning',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
+  },
+  {
+    sellerid: '220100003',
+    name: 'Kate Hunington',
+    email: 'kate.hunington@gmail.com',
+    imgSrc: 'https://mdbootstrap.com/img/new/avatars/7.jpg',
+    title: 'Designer',
+  
   },
 ];
 
 export default function App() {
   return (
     <div className=''>
+
+      <center><h3>Seller Table</h3></center>
     <MDBTable triped hover align='middle'>
       <MDBTableHead>
         <tr>  
@@ -68,9 +120,6 @@ export default function App() {
             <td>
               <MDBBtn color="link" rounded size="sm">
                 Viwe
-              </MDBBtn>
-              <MDBBtn color="link" rounded size="sm">
-                Update
               </MDBBtn>
               <MDBBtn color="link" rounded size="sm">
                 Delete

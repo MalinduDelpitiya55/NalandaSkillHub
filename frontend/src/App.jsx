@@ -11,10 +11,13 @@ import OneJobPost from "./pages/oneJob";
 import Profile from "./pages/profile";
 import ProfileEdit from "./pages/profileEdit";
 import Usertable from "./components/usertable";
+import Gigimage from "./components/gigimage";
 import User from "./pages/userChoosePage";
 import ForgotPassword from "./pages/fogotPassword";
 import Dashboard from "./pages/dashboard";
+import AdminDashboard from "./pages/admindashbord";
 import Test from "./components/test";
+import Seller from "./components/sellerprofile";
 import Rating from "./pages/ratingForm";
 import Review from "./pages/reviewDisplay";
 import "@fortawesome/fontawesome-free/css/all.css";
@@ -40,11 +43,14 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/gigimage" element={<Gigimage />} />
         <Route path="/test" element={<Test />} />
         <Route path="/Profileedit" element={<ProfileEdit />} />
         <Route path="/adminusertable" element={<Usertable />} />
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
+        <Route path="/sellerp" element={<Seller />} />
       </Routes>
     </Router>
   );
