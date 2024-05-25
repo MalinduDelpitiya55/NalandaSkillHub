@@ -23,6 +23,7 @@ import GradeIcon from '@mui/icons-material/Grade';
 import DvrIcon from '@mui/icons-material/Dvr';
 import AddCardIcon from '@mui/icons-material/AddCard';
 import LogoutIcon from '@mui/icons-material/Logout';
+import Buyerprofile from '../components/buyerprofile';
 
 
 const drawerWidth = 240;
@@ -202,7 +203,8 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        {/* ?????????????????????????? */}
+        <Buyerprofile/>
+        
       </Box>
     </Box>
   );

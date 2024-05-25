@@ -20,6 +20,9 @@ import Test from "./components/test";
 import Seller from "./components/sellerprofile";
 import Rating from "./pages/ratingForm";
 import Review from "./pages/reviewDisplay";
+import Adminseller from "./pages/adminseller";
+import AdminBuyer from "./pages/adminbuyer";
+import AdminGigs from "./pages/admingigs";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -51,6 +54,9 @@ export default function App() {
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
         <Route path="/sellerp" element={<Seller />} />
+        <Route path="/adminseller" element={<Adminseller />} />
+        <Route path="/adminbuyer" element={<AdminBuyer />} />
+        <Route path="/admingig" element={<AdminGigs />} />
       </Routes>
     </Router>
   );

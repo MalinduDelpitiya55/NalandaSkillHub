@@ -1,9 +1,9 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
-import UserTable from "./sellertable";
+import Buyertable from "./buyertable";
 import DashboardStats from './admincard';
 
 
+  
   export default function CSSGrid() {
     return (
       <Box sx={{ width: 1 }}>
@@ -14,7 +14,7 @@ import DashboardStats from './admincard';
           </Box>
           <Box gridColumn="span 12">
             <div>
-                <UserTable/>
+                <Buyertable/>
             </div>
           </Box>
         </Box>
