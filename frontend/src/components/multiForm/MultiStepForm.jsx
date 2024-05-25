@@ -64,7 +64,7 @@ const MultiStepForm = () => {
       }
       console.log("formDataCop : ", combinedData);
       const response = await fetch(
-        "http://localhost:5001/sellerRegistration12",
+        "http://localhost:3306/register/seller",
         {
           method: "POST",
           headers: {

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import DefaultPP from "../../assets/images/profile-circle.svg";
-import Tagify from "../test";
+import Tagify from "../ragistration/skillsInputForRegister";
 const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
   const handleChange = (e) => {
     if (e.target.name === "image") {
@@ -154,4 +154,3 @@ Step2.propTypes = {
 };
 
 export default Step2;
-

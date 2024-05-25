@@ -1,6 +1,6 @@
 
-import Review from './../components/review'
-import Navbar from "./../components/navbar";
+import Review from './../components/ratings/review'
+import Navbar from "./../components/navbar/navbar";
 
 
 export default function reviewDisplay() {
