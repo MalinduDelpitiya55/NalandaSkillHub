@@ -1,8 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import JobPostImg1 from './../assets/jobPost/img1.jpg';
-import JobPostImg2 from './../assets/jobPost/img2.jpg';
-import JobPostImg3 from './../assets/jobPost/img3.png';
+import JobPostImg1 from './../../assets/jobPost/img1.jpg';
+import JobPostImg2 from './../../assets/jobPost/img2.jpg';
+import JobPostImg3 from './../../assets/jobPost/img3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 

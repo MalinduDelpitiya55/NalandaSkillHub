@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom"; // Import useNavigate
 import { Link } from "react-router-dom";
-import SigninIMG from "./../assets/images/signinIMG.jpg";
+import SigninIMG from "./../../assets/images/signinIMG.jpg";
 
 function SignInForm() {
   const emailRef = useRef(null);

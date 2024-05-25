@@ -169,7 +169,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
-import Profilepic from '../assets/images/profile/profile-img.jpg';
+import Profilepic from '../../assets/images/profile/profile-img.jpg';
 
 const CVSection = () => {
   // Define constant arrays for different sections

@@ -1,6 +1,6 @@
 
 import ReactCardSlider from "react-card-slider-component";
-import "./css/slide.css";
+import "./../css/slide.css";
 
 function Sliderimage() {
   const slides = [

@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import SigninIMG from "./../assets/images/signinIMG.jpg";
+import SigninIMG from "./../../assets/images/signinIMG.jpg";
 
 export default function BuyersRegistration() {
   const nameRef = useRef("");
