@@ -39,6 +39,11 @@ const rows = [
   createData('R003', 5, 'Excellent!', 'Project Manager', 'Approved', <Button variant="contained">Edit</Button>),
   createData('R004', 2, 'Needs improvement', 'UX Designer', 'Rejected', <Button variant="contained">Edit</Button>),
   createData('R005', 4, 'Well done', 'System Admin', 'Approved', <Button variant="contained">Edit</Button>),
+  createData('R006', 4, 'Great', 'System Admin', 'Approved', <Button variant="contained">Edit</Button>),
+  createData('R007', 5, 'Superb!', 'Web Developer', 'Approved', <Button variant="contained">Edit</Button>),
+  createData('R008', 3, 'Nice work', 'Data Analyst', 'Pending', <Button variant="contained">Edit</Button>),
+  createData('R009', 4, 'Well done', 'System Admin', 'Approved', <Button variant="contained">Edit</Button>),
+  createData('R010', 1, 'Need more improvements', 'UX Designer', 'Rejected', <Button variant="contained">Edit</Button>),
 ];
 
 export default function CustomizedTables() {
