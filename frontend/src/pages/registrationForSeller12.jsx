@@ -9,7 +9,7 @@ export default function sellerSignup() {
       <header>
         <Navbar />
       </header>
-      <div className="p-5">
+      <div className="REGISTER">
         <RegistrationForm />
       </div>
       <footer>

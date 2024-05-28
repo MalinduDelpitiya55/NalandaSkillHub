@@ -36,7 +36,7 @@ export default function App() {
   return (
 <div>
     <center><h1 className='fw-bold '>BUYER PROFILE</h1></center>
-    <MDBTable align='middle'>
+    <MDBTable align='middle' triped hover>
       <MDBTableHead>
         <tr className='table-dark'>
         <th scope="col">Buyer ID</th>

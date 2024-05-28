@@ -23,6 +23,9 @@ import Review from "./pages/reviewDisplay";
 import Adminseller from "./pages/adminseller";
 import AdminBuyer from "./pages/adminbuyer";
 import AdminGigs from "./pages/admingigs";
+import Adminrating from "./pages/adminrating";
+import AdminOrder from "./pages/adminorder";
+import AdminPayment from "./pages/adminpayment";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -57,6 +60,9 @@ export default function App() {
         <Route path="/adminseller" element={<Adminseller />} />
         <Route path="/adminbuyer" element={<AdminBuyer />} />
         <Route path="/admingig" element={<AdminGigs />} />
+        <Route path="/adminrating" element={<Adminrating />} />
+        <Route path="/adminorder" element={<AdminOrder />} />
+        <Route path="/adminpayment" element={<AdminPayment />} />
       </Routes>
     </Router>
   );

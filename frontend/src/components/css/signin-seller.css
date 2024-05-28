@@ -1,6 +1,7 @@
 .bodyreg{
     background-image: url('./../../assets/images/regback.jpeg') ;
     background-repeat: no-repeat;
+    width: 101%;
     
    
 
@@ -29,7 +30,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background: linear-gradient(45deg, hsl(210, 100%, 85%), #60c5ff);
+    background: linear-gradient(45deg, hsl(211, 83%, 88%), #97d5fa);
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 190px; 
@@ -53,7 +54,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    background: linear-gradient(45deg, hsl(211, 83%, 88%), #97d5fa);
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 150px; 
@@ -75,7 +76,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    background: linear-gradient(45deg, hsl(211, 83%, 88%), #97d5fa);
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 190px; 
@@ -109,7 +110,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    background: linear-gradient(45deg, hsl(211, 83%, 88%), #97d5fa);
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 190px; 
@@ -131,7 +132,7 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background: linear-gradient(45deg, #9ca8ff, #aae0ff);
+    background: linear-gradient(45deg, hsl(211, 83%, 88%), #97d5fa);
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 190px; 

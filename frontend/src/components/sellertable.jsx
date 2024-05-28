@@ -63,7 +63,7 @@ export default function App() {
   return (
 <div>
     <center><h1 className='fw-bold '>SELLER PROFILE</h1></center>
-    <MDBTable align='middle'>
+    <MDBTable align='middle' triped hover >
       <MDBTableHead>
         <tr className='table-dark'>
         <th scope="col">Seller ID</th>
@@ -73,7 +73,7 @@ export default function App() {
           <th scope="col">Actions</th>
         </tr>
       </MDBTableHead>
-      <MDBTableBody>
+      <MDBTableBody >
         {users.map((user, index) => (
           <tr key={index}>
             <td>
