@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-import User from "./../components/sellerOrBuyer";
-import Navbar from "./../components/navbar";
-import Footer from "./../components/footer";
+import User from "../../components/login/sellerOrBuyer";
+import Navbar from "./../../components/navbar/navbar";
+import Footer from "./../../components/footer/footer";
 export default function user() {
   return (
     <div>

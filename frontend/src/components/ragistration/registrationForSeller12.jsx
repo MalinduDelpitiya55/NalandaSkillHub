@@ -1,10 +1,10 @@
-import  {useRef, useState, useEffect} from "react";
+import {useRef, useState, useEffect} from "react";
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
-import Tagify from "./test";
-import "./css/signin-seller.css";
-import DefaultPP from "./../assets/images/profile-circle.svg";
+import Tagify from "./skillsInputForRegister";
+import "./../css/signin-seller.css";
+import DefaultPP from "./../../assets/images/profile-circle.svg";
 
 function MultiStepForm() {
   const [step, setStep] = useState(1);
@@ -52,12 +52,12 @@ function MultiStepForm() {
     setStep(step + 1);
   };
 
-   const handleKeyDown = (e) => {
-     if (e.key === "Enter") {
-       e.preventDefault();
-       return false;
-     }
-   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      return false;
+    }
+  };
   const prevStep = () => {
     setStep(step - 1);
   };
@@ -147,12 +147,10 @@ function MultiStepForm() {
     switch (step) {
       case 1:
         return (
-          <div className="bodyreg row vh-100" >
-            <div
-              className="col-lg-6 col-xl-6  p-5">
-            </div>
+          <div className="bodyreg row vh-100">
+            <div className="col-lg-6 col-xl-6  p-5"></div>
             <div className="col-lg-6 col-xl-6 col-md-12">
-              <div className="singcard p-2 bg-opacity-50" >
+              <div className="singcard p-2 bg-opacity-50">
                 <div className=" mx-3 ">
                   <h2 className="step1">Step 1</h2>
                   <div className="row mx-5  mt-5">
@@ -256,7 +254,9 @@ function MultiStepForm() {
                   <div className="row mt-lg-5 mt-md-4 mt-sm-4 mx-5">
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 mt-lg-0 mt-md-4">
                       <div className="col-12 d-flex flex-row">
-                        <label className="lbbirthday" htmlFor="dob">Birthday : </label>
+                        <label className="lbbirthday" htmlFor="dob">
+                          Birthday :{" "}
+                        </label>
 
                         <input
                           type="date"
@@ -381,7 +381,9 @@ function MultiStepForm() {
                   <table className="mx-5 mt-5">
                     <tr className="col-7">
                       <td className="col-1">
-                        <label htmlFor="uname" className="step2lb">User Name:</label>
+                        <label htmlFor="uname" className="step2lb">
+                          User Name:
+                        </label>
                       </td>
                       <td className="col-3 px-4">
                         <input

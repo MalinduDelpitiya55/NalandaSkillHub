@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 
 const orders = [
   { id: 1, title: "I will create a professional logo for your business", price: 450, dueIn: "9d, 10h", status: "In Progress" },

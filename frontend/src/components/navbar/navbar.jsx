@@ -1,11 +1,8 @@
 
 //import React from "react";
-import "./js/nav.js";
-
-
-import './js/nav.js';
-import Logo from "./../assets/images/home/logo.png";
-import Logo1 from "./../assets/images/home/logo1.png";
+import './../js/nav.js';
+import Logo from "./../../assets/images/home/logo.png";
+import Logo1 from "./../../assets/images/home/logo1.png";
 import {Link} from "react-router-dom";
 function Navbars() {
   return (

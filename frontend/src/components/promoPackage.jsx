@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,41 +26,49 @@ const Card = ({ title, promo, price, delivery, features, buttonLabel }) => {
     );
 };
 
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  promo: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  delivery: PropTypes.string.isRequired,
+  features: PropTypes.arrayOf(PropTypes.string).isRequired,
+  buttonLabel: PropTypes.string.isRequired,
+};
 const App = () => {
-    const cardData = [
-        {
-            title: 'Basic',
-            promo: 'BASIC PROMO',
-            price: 100,
-            delivery: '4 DAYS DELIVERY',
-            features: ['BASIC 2 logo concept', 'vector file', 'source file', '3D images'],
-            buttonLabel: 'Basic',
-        },
-        {
-            title: 'Standard',
-            promo: 'STANDARD PROMO',
-            price: 300,
-            delivery: '4 DAYS DELIVERY',
-            features: ['STANDARD 2 logo concept', 'vector file', 'source file', '3D images'],
-            buttonLabel: 'Standard',
-        },
-        {
-            title: 'Premium',
-            promo: 'PREMIUM PROMO',
-            price: 500,
-            delivery: '4 DAYS DELIVERY',
-            features: ['PREMIUM 2 logo concept', 'vector file', 'source file', '3D images'],
-            buttonLabel: 'Premium',
-        },
-    ];
+  const cardData = [
+    {
+      title: 'Basic',
+      promo: 'BASIC PROMO',
+      price: 100,
+      delivery: '4 DAYS DELIVERY',
+      features: ['BASIC 2 logo concept', 'vector file', 'source file', '3D images'],
+      buttonLabel: 'Basic',
+    },
+    {
+      title: 'Standard',
+      promo: 'STANDARD PROMO',
+      price: 300,
+      delivery: '4 DAYS DELIVERY',
+      features: ['STANDARD 2 logo concept', 'vector file', 'source file', '3D images'],
+      buttonLabel: 'Standard',
+    },
+    {
+      title: 'Premium',
+      promo: 'PREMIUM PROMO',
+      price: 500,
+      delivery: '4 DAYS DELIVERY',
+      features: ['PREMIUM 2 logo concept', 'vector file', 'source file', '3D images'],
+      buttonLabel: 'Premium',
+    },
+  ];
 
-    return (
-        <div style={styles.cardContainer}>
-            {cardData.map((card, index) => (
-                <Card key={index} {...card} />
-            ))}
-        </div>
-    );
+  return (
+    <div style={styles.cardContainer}>
+      {cardData.map((card, index) => (
+        <Card key={index} {...card} />
+      ))}
+    </div>
+  );
 };
 
 const styles = {
@@ -122,7 +131,7 @@ const styles = {
         borderRadius: '5px',
         cursor: 'pointer',
         marginLeft: '50px',
-    },
+       },
 };
 
 export default App;
