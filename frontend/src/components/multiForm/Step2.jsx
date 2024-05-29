@@ -34,10 +34,10 @@ const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
   };
 
   return (
-    <div className="row -5 p-5" style={{backgroundColor: "#ecf8ff"}}>
+    <div className="bodyreg row -5" style={{backgroundColor: "#ecf8ff"}}>
       <div className="col-lg-6 col-xl-6 p-5" id="Signin-Background"></div>
       <div className="col-lg-6 col-xl-6 col-md-12">
-        <div className="card p-4" style={{backgroundColor: "#ecf8ff"}}>
+        <div className="singcard p-4" >
           <div>
             <h2>Step 2</h2>
             <table className="mx-5">
@@ -91,14 +91,14 @@ const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
               <tbody>
                 <tr className="col-7">
                   <td className="col-1">
-                    <label htmlFor="uname">User Name:</label>
+                    <label htmlFor="uname" className="step2lb">User Name:</label>
                   </td>
                   <td className="col-3 px-4">
                     <input
                       type="text"
                       id="uname"
                       name="uname"
-                      className="form-control col-2"
+                      className="input1 form-control col-2"
                       value={formData.uname}
                       onChange={handleChange}
                       placeholder="User Name"
@@ -115,20 +115,22 @@ const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
                     <textarea
                       id="description"
                       name="description"
-                      className="form-control mt-5"
+                      className="input4 form-control mt-5"
                       value={formData.description}
                       onChange={handleChange}
                     />
                   </td>
                 </tr>
                 <tr className="col-8">
-                  <td className="col-1 align-items-start">
-                    <label htmlFor="Tagify" className="mt-5">
+                  <td className="col-1 ">
+                    <label htmlFor="Tagify" className="step2lb mt-5">
                       Add your Skills:
                     </label>
                   </td>
-                  <td className="col-4">
-                    <Tagify />
+                  <td className=" col-4 ">
+                    <div className="tagitag"> 
+                       <Tagify />
+                     </div>
                   </td>
                 </tr>
               </tbody>

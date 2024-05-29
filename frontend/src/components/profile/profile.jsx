@@ -170,6 +170,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import Profilepic from '../../assets/images/profile/profile-img.jpg';
+import Profilegig from './profilegig.jsx'
 
 const CVSection = () => {
   // Define constant arrays for different sections
@@ -197,9 +198,7 @@ const CVSection = () => {
             font-weight: bold;
           }
 
-          .editp {
-            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-          }
+          
 
           .sidec {
             align-items: center;
@@ -353,7 +352,7 @@ const CVSection = () => {
               <h3>My Gig</h3>
               <hr />
               <dl>
-                {/* Add your gigs here */}
+                <Profilegig />
               </dl>
             </div>
           </div>

@@ -334,10 +334,7 @@ function MultiStepForm() {
       case 2:
         return (
           <div className="bodyreg row -5" style={{backgroundColor: "#ecf8ff"}}>
-            <div
-              className="col-lg-6 col-xl-6  p-5"
-              id="Signin-Background"
-            ></div>
+            <div  className="col-lg-6 col-xl-6  p-5" id="Signin-Background"></div>
             <div className="col-lg-6 col-xl-6 col-md-12">
               <div className="singcard  p-4 ">
                 <div>

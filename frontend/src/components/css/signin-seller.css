@@ -143,6 +143,10 @@
 .input5::placeholder {
     color: #000000;
   }
+
+  .tagitag{
+    margin-left: 125px;
+  }
   
 .input5:focus {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -151,4 +155,5 @@
 
   .step2lb{
     color: #ffffff;
+    padding-right: 155px;
   }
