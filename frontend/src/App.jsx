@@ -21,6 +21,7 @@ import Review from "./pages/reviewDisplay";
 import ActiveOrders from "./pages/order/activeOrder";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import New from "./components/new";
 
 
 
@@ -46,6 +47,8 @@ export default function App() {
         <Route path="/ratingForm" element={<Rating />} />
         <Route path="/reviewDisplay" element={<Review />} />
         <Route path="/activeorders" element={<ActiveOrders />} />
+        <Route path="/new" element={<New />} />
+
 
       </Routes>
     </Router>
