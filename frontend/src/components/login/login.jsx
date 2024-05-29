@@ -34,14 +34,21 @@ function SignInForm() {
     }
 
     try {
+      console.log(email + " " + password)
       const res = await axios.post("http://localhost:3306/login", {
         email,
         password,
       });console.log(res);
       if (res.status === 200) {
         const token = res.data.accessToken;
+         const userID = res.data.user._id;
+         const role = res.data.user.role;
         console.log(token);
         localStorage.setItem("accessToken", token);
+        localStorage.setItem("userID", userID);
+        localStorage.setItem("role", role);
+        // localStorage.setItem("userID", userID);
+        // localStorage.setItem("userID", role);
         navigate("/"); // Navigate to /home
       }
     } catch (error) {
