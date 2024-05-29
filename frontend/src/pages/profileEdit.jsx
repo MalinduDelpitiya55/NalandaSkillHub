@@ -1,5 +1,4 @@
 
-import React from 'react'
 import Profileedit from "../components/profileedit";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
