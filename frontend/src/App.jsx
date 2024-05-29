@@ -7,7 +7,7 @@ import SellerRegistration12 from "./pages/signup/seller/registrationForSeller12"
 import Login from "./pages/login/login";
 import Home from "./pages/home/home";
 
-import Gigimage from "./components/home/gigimage";
+import Gigimage from "./components/gigs/gigimage";
 import AdminDashboard from "./pages/admin/admindashbord";
 import Adminseller from "./pages/admin/adminseller";
 import AdminBuyer from "./pages/admin/adminbuyer";

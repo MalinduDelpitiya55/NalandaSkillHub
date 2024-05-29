@@ -2,10 +2,11 @@
 import {useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useNavigate} from "react-router-dom";
-// import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
  import './../css/home.css';
  import Slideimg from './slider.jsx'
-//  import Explore from './explore.jsx'
+ import Explore from './explore.jsx'
+ import Homegig from './homegig.jsx'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -13,7 +14,7 @@ import Business from "./../../assets/images/home/business.png";
 import Qualities from "./../../assets/images/home/qualities.png";
 import Tick from "./../../assets/images/home/tick.svg";
 import Logo from "../../assets/images/home/logo.png";
-//import Logo1 from "./../assets/images/home/logo1.png";
+// import Logo1 from "../../assets/images/home/logo1.png";
 //import Job from "../pages/jobPost.jsx";
 import axios from 'axios';
 
@@ -424,7 +425,13 @@ const Home = () => {
           {/* Popular Services */}
           <center><h2 className='popularservices'>Popular Services</h2></center>
 
-          <div id="Services"><Slideimg/></div>
+          <div id="Services">
+            <Slideimg />
+          </div>
+          
+          <div id="gighome">
+            <Homegig />
+          </div>
 
           {/* Our Qualities */}
           <section
@@ -517,6 +524,7 @@ const Home = () => {
       
           <section className="explore py-5 px-3 px-sm-4 px-md-5" id="explore">
             <h1 className="mt-5" style={{fontSize: '2.1rem'}}>Explore the marketplace</h1>
+            <Explore />
           </section>
           
           {/* proconnect business */}

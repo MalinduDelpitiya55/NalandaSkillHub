@@ -87,46 +87,7 @@ const CardList = () => {
       price: 'Rs39393',
       link: '#',
     },
-    {
-      imgSrc: JobPostImg3,
-      profileImgSrc: JobPostImg1,
-      profileName: 'James Anderson',
-      location: 'United Kingdom',
-      rating: 4.8,
-      description: 'I will create minimal and luxury logo design.',
-      price: 'Rs39393',
-      link: '#',
-    },
-    {
-      imgSrc: JobPostImg1,
-      profileImgSrc: JobPostImg1,
-      profileName: 'James Anderson',
-      location: 'United Kingdom',
-      rating: 4.8,
-      description: 'I will design modern minimalist luxury business logo design.',
-      price: 'Rs39393',
-      link: '/onejobpost',
-    },
-    {
-      imgSrc: JobPostImg2,
-      profileImgSrc: JobPostImg2,
-      profileName: 'James Anderson',
-      location: 'United Kingdom',
-      rating: 4.8,
-      description: 'I will design a professional sponsorship proposal, business proposal, and letter.',
-      price: 'Rs39393',
-      link: '#',
-    },
-    {
-      imgSrc: JobPostImg3,
-      profileImgSrc: JobPostImg1,
-      profileName: 'James Anderson',
-      location: 'United Kingdom',
-      rating: 4.8,
-      description: 'I will create minimal and luxury logo design.',
-      price: 'Rs39393',
-      link: '#',
-    },
+    
     // Add more card data objects here...
   ];
 
@@ -228,6 +189,9 @@ const CardList = () => {
           }
         `}
       </style>
+      <div>
+        <center><h2>Most popular Gigs</h2></center>
+      </div>
       <div className="cardfooter-list">
         {cardData.map((card, index) => (
           <a key={index} href={card.link} className="cardfooter-item">
