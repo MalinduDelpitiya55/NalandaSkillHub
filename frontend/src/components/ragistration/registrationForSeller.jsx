@@ -1,4 +1,4 @@
 
-import MultiStepForm from "../../multiForm/MultiStepForm.jsx";
+import MultiStepForm from "../../components/multiForm/MultiStepForm";
 
 export default MultiStepForm;
