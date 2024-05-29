@@ -4,13 +4,8 @@ import Navbar from "./../components/navbar/navbar";
 import Footer from "./../components/footer/footer";
 import Propic from "./../assets/jobPost/propic.jpg";
 import Gig from "./../assets/jobPost/img1.jpg";
-<<<<<<< HEAD
 import PromoPackage from './../components/promoPackage';
-import Review from "./../components/review";
-=======
-import PromoPackage from "./../components/promoPackage";
 import Review from "./../components/ratings/review";
->>>>>>> f8b5b00368a5045d615637b3485d8181c52b865b
 
 export default function jobPost() {
   return (
