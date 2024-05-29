@@ -28,7 +28,7 @@ export default function jobPost() {
             alt="Profile Picture"
             style={{
               borderRadius: "50%",
-              width: "30px",
+              width: "31px",
               height: "30px",
               objectFit: "cover",
               marginRight: "10px",
