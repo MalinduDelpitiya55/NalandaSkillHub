@@ -32,10 +32,7 @@ export default function App() {
         <Route path="/user" element={<User />} />
         <Route path="/buyerRegistration" element={<BuyersRegistration />} />
         <Route path="/sellerRegistration" element={<SellerRegistration />} />
-        <Route
-          path="/sellerRegistration12"
-          element={<SellerRegistration12 />}
-        />
+        <Route path="/sellerRegistration12" element={<SellerRegistration12 />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/jobpost" element={<Job />} />
         <Route path="/onejobpost" element={<OneJobPost />} />
