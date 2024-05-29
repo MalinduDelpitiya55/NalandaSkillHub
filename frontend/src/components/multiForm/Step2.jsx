@@ -1,8 +1,24 @@
 import PropTypes from "prop-types";
 import DefaultPP from "../../assets/images/profile-circle.svg";
-import Tagify from "../test";
+import Tagify from "../ragistration/skillsInputForRegister";
 const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
+  // Function to handle input changes, including file inputs
   const handleChange = (e) => {
+    const {name, value, files} = e.target;
+    if (name === "image" && files[0]) {
+      const file = files[0]; // Get the first file from the input
+      setFormData((prevData) => ({...prevData, image: file})); // Update formData with the selected file
+
+      const reader = new FileReader(); // Create a new FileReader instance
+      reader.onload = () => {
+        setFormData((prevData) => ({...prevData, imagePreview: reader.result})); // Update formData with the image preview
+      };
+      reader.readAsDataURL(file); // Read the file as a data URL
+    } else {
+      setFormData((prevData) => ({...prevData, [name]: value})); // Update formData with the input value
+    }
+  };
+  const handleimage = (e) => {
     if (e.target.name === "image") {
       const file = e.target.files[0];
       setFormData({...formData, image: file});
@@ -62,7 +78,7 @@ const Step2 = ({formData, setFormData, submitForm, prevStep}) => {
                         className="custom-file-input form-control"
                         id="image"
                         name="image"
-                        onChange={handleChange}
+                        onChange={handleimage}
                         accept="image/*"
                       />
                     </div>
@@ -154,4 +170,3 @@ Step2.propTypes = {
 };
 
 export default Step2;
-

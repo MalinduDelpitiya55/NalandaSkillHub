@@ -20,13 +20,7 @@ const MultiStepForm = () => {
     imagePreview: null,
   };
 
-  const [formData, setFormData] = useState(() => {
-    const savedData = localStorage.getItem("formData");
-     console.log("SavedData : " , savedData);
-    return savedData ? JSON.parse(savedData) : initialFormData;
-   
-  });
-  
+  const [formData, setFormData] = useState(initialFormData);
   const [step, setStep] = useState(1);
 
   useEffect(() => {
@@ -38,76 +32,47 @@ const MultiStepForm = () => {
 
   const submitForm = async () => {
     try {
-      // Retrieve formData and skills from local storage
-      const formData = JSON.parse(localStorage.getItem("formData")); // formData is an object
-      const skills = JSON.parse(localStorage.getItem("skills")); // skills is an array
-      const combinedData = {
-        ...formData, // Spread operator to include all formData properties
-        skills: skills, // Add skills array
-      };
-      console.log("formDataCopy : ", combinedData);
-      if (combinedData.image) {
-        const imageFormData = new FormData();
-        imageFormData.append("file", combinedData.image);
-        imageFormData.append("upload_preset", "your_upload_preset"); // Replace with your Cloudinary upload preset
-        // Upload the image to Cloudinary
-        const imageResponse = await fetch(
-          "https://api.cloudinary.com/v1_1/dcvk2iamg/image/upload",
-          {
-            method: "POST",
-            body: imageFormData,
-          }
-        );
-        console.log("imageFormData", imageFormData);
-        const imageResult = await imageResponse.json();
-        combinedData.image = imageResult.url; // Adjust based on your backend response
-      }
-      console.log("formDataCop : ", combinedData);
-      const response = await fetch(
-        "http://localhost:5001/sellerRegistration12",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(combinedData),
+      const formDataToSend = new FormData();
+      for (const key in formData) {
+        if (Object.prototype.hasOwnProperty.call(formData, key)) {
+          formDataToSend.append(key, formData[key]);
         }
-      );
+      }
+      const response = await fetch("http://localhost:3306/register/seller", {
+        method: "POST",
+        body: formDataToSend,
+      });
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
       console.log("Form submitted successfully:", data);
-      // Clear form data from local storage after successful submission
       localStorage.removeItem("formData");
-      localStorage.clear();
-      setFormData(initialFormData); // Reset form data
+      localStorage.removeItem("skills");
     } catch (error) {
       console.error("Error submitting form:", error);
     }
   };
 
-  switch (step) {
-    case 1:
-      return (
+  return (
+    <>
+      {step === 1 && (
         <Step1
           formData={formData}
           setFormData={setFormData}
           nextStep={nextStep}
         />
-      );
-    case 2:
-      return (
+      )}
+      {step === 2 && (
         <Step2
           formData={formData}
           setFormData={setFormData}
           prevStep={prevStep}
           submitForm={submitForm}
         />
-      );
-    default:
-      return <div>Error: Invalid step</div>;
-  }
+      )}
+    </>
+  );
 };
 
 export default MultiStepForm;
